@@ -1,0 +1,38 @@
+    2  vi  funcptrtest.c
+    3  cc funcptrtest.c -o run
+    4  ./run
+    5  vi  funcptrtest.c
+    6  cc funcptrtest.c -o run
+    7  ./run
+    8  vi  funcptrtest.c
+    9  cc funcptrtest.c -o run
+   10  ./run
+   11  vi  funcptrtest.c
+   12  cc funcptrtest.c -o run
+   13  ./run
+   14  vi  funcptrtest.c
+   15  cc funcptrtest.c -o run
+   16  ./run
+   17  vi  funcptrtest.c
+   18  cc funcptrtest.c -o run
+   19  vi  funcptrtest.c
+   20  cp funcovldtest.cpp exceptiontest.cpp
+   21  vi exceptiontest.cpp 
+   22  c++ exceptiontest.cpp -o run
+   23  ./run 
+   24  vi exceptiontest.cpp 
+   25  c++ exceptiontest.cpp -o run
+   26  ./run 
+   27  vi exceptiontest.cpp 
+   28  c++ exceptiontest.cpp -o run
+   29  ./run 
+   30  vi exceptiontest.cpp 
+   31  ./run 
+   32  vi exceptiontest.cpp 
+   33  c++ exceptiontest.cpp -o run
+   34  ./run 
+   35  vi exceptiontest.cpp 
+   36  c++ exceptiontest.cpp -o run
+   37  ./run 
+   38  vi exceptiontest.cpp 
+   39  history > cmd07.txt

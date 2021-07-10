@@ -1,0 +1,43 @@
+    3  vi voidptrtest.c
+    4  cc voidptrtest.c -o run
+    5  ./run 
+    6  vi voidptrtest.c
+    7  cc voidptrtest.c -o run
+    8  ./run 
+    9  vi voidptrtest.c
+   10  cc voidptrtest.c -o run
+   11  ./run 
+   12  vi voidptrtest.c
+   13  cc voidptrtest.c -o run
+   14  ./run 
+   15  vi voidptrtest.c
+   16  cc voidptrtest.c -o run
+   17  ./run 
+   18  vi voidptrtest.c
+   19  cc voidptrtest.c -o run
+   20  ./run 
+   21  vi voidptrtest.c
+   22  vi subtypetest1.cpp 
+   23  vi voidptrtest.c
+   24  cc voidptrtest.c -o run
+   25  ./run 
+   26  vi voidptrtest.c
+   27  vi genfunctest.cpp
+   28  c++ genfunctest.cpp -o run
+   29  ./run 
+   30  vi genfunctest.cpp
+   31  c++ genfunctest.cpp -o run
+   32  ./run 
+   33  vi genfunctest.cpp
+   34  c++ genfunctest.cpp -o run
+   35  ./run 
+   36  vi genfunctest.cpp
+   37  c++ genfunctest.cpp -o run
+   38  vi genfunctest.cpp
+   39  c++ genfunctest.cpp -o run
+   40  ./run 
+   41  vi genclasstest.cpp
+   42  c++ genclasstest.cpp -o run
+   43  ./run 
+   44  vi genclasstest.cpp
+   45  history > cmd15.txt

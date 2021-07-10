@@ -1,0 +1,27 @@
+    4  vi reftypetest.cpp 
+    5  c++ reftypetest.cpp -o run
+    6  vi reftypetest.cpp 
+    7  c++ reftypetest.cpp -o run
+    8  vi reftypetest.cpp 
+    9  c++ reftypetest.cpp -o run
+   10  vi reftypetest.cpp 
+   11  c++ reftypetest.cpp -o run
+   12  ./run
+   13  vi reftypetest.cpp 
+   14  c++ reftypetest.cpp -o run
+   15  vi reftypetest.cpp 
+   16  vi classtest2.cpp 
+   17  vi classtest1.cpp 
+   18  vi reftypetest.cpp 
+   19  cp reftypetest.cpp heaptest.cpp
+   20  vi heaptest.cpp 
+   21  c++ heaptest.cpp -o run
+   22  ./run 
+   23  vi heaptest.cpp 
+   24  c++ heaptest.cpp -o run
+   25  ./run 
+   26  vi heaptest.cpp 
+   27  c++ heaptest.cpp -o run
+   28  ./run 
+   29  vi heaptest.cpp 
+   30  history > cmd12.txt

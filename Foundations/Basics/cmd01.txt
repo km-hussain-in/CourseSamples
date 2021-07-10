@@ -1,0 +1,45 @@
+    9  mkdir -p Foundations/Basics
+   10  cd Foundations/Basics/
+   11  wget -q met.hussain.in/asm64.tar.gz -O - |tar -x
+   12  ls
+   13  vi hello1.s
+   14  ls
+   15  as hello1.s -o hello1.o
+   16  ls
+   17  vi hello1.s 
+   18  vi hello1.o 
+   19  ld hello1.o system.o -o hello1
+   20  ls
+   21  ./hello1 
+   22  vi hello1.s 
+   23  as hello1.s -o hello1.o
+   24  vi hello1.s 
+   25  ./hello1 
+   26  as hello1.s -o hello1.o
+   27  ld hello1.o system.o -o hello1
+   28  cd ..
+   29  ls
+   30  Basics/hello1 
+   31  cd Basics/
+   32  ./hello1 
+   33  vi hello1.s 
+   34  as hello1.s -o hello1.o
+   35  ld hello1.o system.o -o hello1
+   36  ./hello1 
+   37  vi hello2.c
+   38  ls
+   39  cc -S hello2.c 
+   40  ls
+   41  as hello2.s -o hello2.o
+   42  ls hello2.o system.o -o hello2
+   43  ld hello2.o system.o -o hello2
+   44  ls
+   45  ./hello2
+   46  vi hello2.c
+   47  cc -S hello2.c
+   48  vi hello2.s
+   49  ./hello2.c
+   50  vi hello3.py
+   51  python3 hello3.py 
+   52  vi hello3.py
+   53  history > cmd01.txt

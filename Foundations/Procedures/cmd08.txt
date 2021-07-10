@@ -1,0 +1,39 @@
+    1  cd /SoftDev/DAC0521M/Foundations/Procedures/
+    2  vi calltest.s 
+    3  vi gcd.s
+    4  vi ../Basics/looptest.s 
+    5  vi ../Basics/jumptest.s 
+    6  vi ../Basics/looptest.s 
+    7  vi gcd.s
+    8  as gcd.s -o gcd.o
+    9  objdump -t gcd.o
+   10  vi gcd.s
+   11  as gcd.s -o gcd.o
+   12  objdump -t gcd.o
+   13  vi gcd.s
+   14  vi externtest1.c 
+   15  cc externtest1.c -o run
+   16  vi externtest1.c 
+   17  cc externtest1.c gcd.o -o run
+   18  ./run
+   19  scp externtest1.c hb@ubuntupi.lan:Testing
+   20  ssh hb@ubuntupi.lan
+   21  scp hb@ubuntupi.lan:Testing/gcd.s gcd_a64.s
+   22  vi gcd.s
+   23  vi gcd_a64.s 
+   24  vi primes.c
+   25  cc -c primes.c 
+   26  ls
+   27  objdump -t primes.o
+   28  vi primes.c
+   29  cc -c primes.c 
+   30  objdump -t primes.o
+   31  vi externtest2.c 
+   32  cc externtest2.c primes.o -o run
+   33  ./run 
+   34  vi externtest2.c 
+   35  vi primes.c 
+   36  cc -c primes.c 
+   37  cc externtest2.c primes.o -o run
+   38  ./run 
+   39  history > cmd08.txt

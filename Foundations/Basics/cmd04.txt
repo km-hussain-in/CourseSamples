@@ -1,0 +1,32 @@
+    2  cp memaddrtest1.s jumptest.s
+    3  vi jumptest.s 
+    4  as jumptest.s 
+    5  ld a.out system.o -o run
+    6  ./run 
+    7  vi jumptest.s 
+    8  as jumptest.s 
+    9  ld a.out system.o -o run
+   10  ./run
+   11  vi jumptest.s 
+   12  vi ifelsetest.c
+   13  cc ifelsetest.c -o run
+   14  ./run 
+   15  vi ifelsetest.c
+   16  ./run 
+   17  vi ifelsetest.c
+   18  cc ifelsetest.c -o run
+   19  ./run 
+   20  vi switchcasetest.c
+   21  cc switchcasetest.c -o run
+   22  ./run 
+   23  vi switchcasetest.c
+   24  cc switchcasetest.c -o run
+   25  ./run 
+   26  vi switchcasetest.c
+   27  cp jumptest.s looptest.s
+   28  vi looptest.s 
+   29  as looptest.s 
+   30  ld a.out system.o -o run
+   31  ./run
+   32  vi looptest.s 
+   33  history > cmd04.txt

@@ -1,0 +1,60 @@
+    4  mkdir Advanced
+    5  cd Advanced/
+    6  vi banner.c
+    7  vi banner1.c
+    8  cc -c banner1.c 
+    9  ls
+   10  vi banner1.c
+   11  vi banner1.h
+   12  vi banner1.c
+   13  cc -c banner1.c
+   14  vi banner1.c
+   15* cc -c banner1.
+   16  vi banner1.c
+   17  vi banner1.h
+   18  vi udttest1.c
+   19  ls
+   20  ls /usr/include/
+   21  cc udttest1.c -o run
+   22  cc udttest1.c banner1.o -o run
+   23  ./run 
+   24  vi banner1.c
+   25* vi banner1.c
+   26  vi banner1.h
+   27  vi banner1.c
+   28  cc -c banner1.c
+   29  vi udttest1.c 
+   30  cc udttest1.c banner1.o -o run
+   31  ./run 
+   32  vi banner1.h
+   33  vi banner1.c
+   34  vi udttest1.c 
+   35  cp banner1.h banner2.h
+   36  vi banner2.h 
+   37  cp banner1.c banner2.c
+   38  vi banner2.c
+   39  vi banner2.h 
+   40  cc -c banner2.c
+   41  vi banner2.c
+   42  cc -c banner2.c
+   43  cp udttest1.c udttest2.c
+   44  vi udttest2.c 
+   45  cc udttest2.c banner2.o -o run
+   46  ./run 
+   47  vi udttest2.c 
+   48  cc udttest2.c banner2.o -o run
+   49  ./run 
+   50  vi udttest2.c 
+   51  vi banner2.c
+   52  vi banner2.h
+   53  vi banner2.c
+   54  vi banner2.h
+   55  vi banner2.c
+   56  vi banner2.h
+   57  cc -c banner2.c
+   58  vi banner2.c
+   59  cc -c banner2.c
+   60  vi udttest2.c 
+   61  cc udttest2.c banner2.o -o run
+   62  ./run
+   63  history > cmd10.txt

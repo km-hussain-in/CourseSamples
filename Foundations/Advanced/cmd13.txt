@@ -1,0 +1,34 @@
+    3  vi series1.h
+    4  vi series1.cpp
+    5  c++ -c series1.cpp 
+    6  ls
+    7  vi subtypetest1.cpp
+    8  c++ subtypetest1.cpp series1.o -o run
+    9  ./run 
+   10  vi subtypetest1.cpp
+   11  c++ subtypetest1.cpp series1.o -o run
+   12  vi subtypetest1.cpp
+   13  c++ subtypetest1.cpp series1.o -o run
+   14  ./run 
+   15  vi subtypetest1.cpp
+   16  vi series1.h
+   17  vi subtypetest1.cpp
+   18  vi series1.h
+   19  vi subtypetest1.cpp
+   20  vi series1.h
+   21  c++ subtypetest1.cpp series1.o -o run
+   22  ./run 
+   23  vi subtypetest1.cpp
+   24  vi series1.h
+   25  c++ subtypetest1.cpp series1.o -o run
+   26  ./run 
+   27  vi series1.h
+   28  c++ -c series1.cpp 
+   29  c++ subtypetest1.cpp series1.o -o run
+   30  ./run 
+   31  vi subtypetest1.cpp
+   32  vi series1.h
+   33  vi subtypetest1.cpp
+   34  vi series1.h
+   35  vi subtypetest1.cpp
+   36  history > cmd13.txt

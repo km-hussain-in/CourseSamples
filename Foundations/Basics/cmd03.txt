@@ -1,0 +1,41 @@
+    1  ls
+    2  cp memaddrtest1.s memaddrtest2.s 
+    3  vi memaddrtest2.s 
+    4  as memaddrtest2.s 
+    5  ld a.out system.o -o run
+    6  ./run 
+    7  vi memaddrtest2.s 
+    8  vi ptrarrtest.c
+    9  cc -c ptrarrtest.c 
+   10  ld ptrarrtest.o system.o -o run
+   11  ./run 
+   12  vi ptrarrtest.c
+   13  vi namespctest.cpp
+   14  c++ -c namespctest.cpp 
+   15  ld namespctest.o system.o -o run
+   16  ./run 
+   17  c++ -c namespctest.cpp 
+   18  vi namespctest.cpp
+   19  c++ -c namespctest.cpp 
+   20  ld namespctest.o system.o -o run
+   21  ./run 
+   22  vi namespctest.cpp
+   23  c++ -c namespctest.cpp 
+   24  ld namespctest.o system.o -o run
+   25  ./run 
+   26  vi namespctest.cpp
+   27  c++ -c namespctest.cpp 
+   28  ld namespctest.o system.o -o run
+   29  ./run 
+   30  vi namespctest.cpp
+   31  c++ -c namespctest.cpp 
+   32  vi namespctest.cpp
+   33  c++ -c namespctest.cpp 
+   34  ld namespctest.o system.o -o run
+   35  ./run 
+   36  vi namespctest.cpp
+   37  c++ -c namespctest.cpp 
+   38  ld namespctest.o system.o -o run
+   39  ./run 
+   40  vi namespctest.cpp
+   41  history > cmd03.txt

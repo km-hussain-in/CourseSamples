@@ -1,0 +1,43 @@
+    3  vi calltest.s 
+    4  cp ../Basics/ifelsetest.c functest.c
+    5  vi functest.c 
+    6  cc functest.c -o run
+    7  ./run 
+    8  vi functest.c 
+    9  vi funcovldtest.cpp
+   10  c++ funcovldtest.cpp -o run
+   11  ./run
+   12  vi funcovldtest.cpp
+   13  c++ funcovldtest.cpp -o run
+   14  vi funcovldtest.cpp
+   15  c++ funcovldtest.cpp -o run
+   16  vi funcovldtest.cpp
+   17  c++ funcovldtest.cpp -o run
+   18  ./run
+   19  vi funcovldtest.cpp
+   20  cc -S functest.c 
+   21  vi functest.s
+   22  vi funcovldtest.cpp
+   23  c++ -S funcovldtest.cpp 
+   24  vi funcovldtest.s
+   25  c++filt _ZN7Payroll6IncomeEif
+   26  c++filt _Z7Payroll6Incomeif
+   27  c++filt _ZN7Payroll6IncomeEif
+   28  vi funcovldtest.cpp
+   29  vi ptrargtest.c
+   30  cc ptrargtest.c -o run
+   31  ./run
+   32  vi ptrargtest.c
+   33  cc ptrargtest.c -o run
+   34  ./run
+   35  vi ptrargtest.c
+   36  cc ptrargtest.c -o run
+   37  ./run
+   38  vi ptrargtest.c
+   39  cc ptrargtest.c -o run
+   40  ./run
+   41  vi ptrargtest.c
+   42  cc ptrargtest.c -o run
+   43  ./run
+   44  vi ptrargtest.c
+   45  history > cmd06.txt

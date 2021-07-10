@@ -1,0 +1,9 @@
+vi memaddrtest1.s
+as memaddrtest1.s
+ld a.out system.o -o run
+./run
+vi exprtest.c
+cc -c exprtest.c
+ld exprtest.o system.o -o run
+./run
+

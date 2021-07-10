@@ -1,0 +1,31 @@
+    4  ls
+    5  objdump -t primes.o
+    6  vi externctest.cpp
+    7  man printf
+    8  vi externctest.cpp
+    9  c++ externctest.cpp -o run
+   10  c++ externctest.cpp gcd.o -o run
+   11  vi externctest.cpp
+   12  objdump -t primes.o
+   13  cp primes.c primes.cpp
+   14  c++ primes.cpp -o primesplus.o
+   15  c++ -c primes.cpp -o primesplus.o
+   16  objdump -t primesplus.o 
+   17  c++ externctest.cpp primes.o -o run
+   18  c++ externctest.cpp primesplus.o -o run
+   19  ./run
+   20  rm primesplus.o 
+   21  vi externctest.cpp 
+   22  c++ externctest.cpp primes.o -o run
+   23  objdump -t primes.o 
+   24  ./run 
+   25  vi externctest.cpp 
+   26  cc -shared primes.c -o libprimes.so
+   27  ls
+   28  vi dynlnktest.py
+   29  python3 dynlnktest.py 
+   30  vi dynlnktest.py
+   31  ls
+   32  ld -shared gcd.o -o libgcd.so
+   33  ls
+   34  history > cmd09.txt
