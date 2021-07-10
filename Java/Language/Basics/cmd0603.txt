@@ -1,0 +1,15 @@
+    2  vi ExceptionTest.java 
+    3  vi src/InsufficientFundsException.java
+    4  vi src/IllegalTransferException.java
+    5  javac -d . src/*.java
+    6  ls banking/
+    7  vi src/Account.java
+    8  javac -d . src/Account.java
+    9  vi  src/Profitable.java
+   10  javac -d .  src/Profitable.java
+   11  javap banking.Profitable
+   12  vi  src/Profitable.java
+   13  javac -d .  src/Profitable.java
+   14  vi  src/Profitable.java
+   15  javac -d .  src/Profitable.java
+   16  history > cmd0603.txt

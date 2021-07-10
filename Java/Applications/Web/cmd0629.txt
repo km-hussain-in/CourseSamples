@@ -1,0 +1,39 @@
+    4  vi BasicWebApp/WEB-INF/web.xml 
+    5  vi src/GreetingServlet.java 
+    6  vi BasicWebApp/WEB-INF/web.xml 
+    7  cp BasicWebApp/welcome.html BasicWebApp/formpost.html
+    8  vi BasicWebApp/formpost.html
+    9  vi src/StateServlet.java
+   10  javap javax.servlet.http.HttpServlet
+   11  javap javax.servlet.GenericServlet
+   12  vi src/StateServlet.java
+   13  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   14  vi src/StateServlet.java
+   15  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   16  vi src/StateServlet.java
+   17  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   18  vi src/StateServlet.java
+   19  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   20  vi src/StateServlet.java
+   21  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   22  touch BasicWebApp/.reload
+   23  vi src/StateServlet.java
+   24  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   25  touch BasicWebApp/.reload
+   26  vi src/StateServlet.java
+   27  javac -d BasicWebApp/WEB-INF/classes/ src/StateServlet.java
+   28  touch BasicWebApp/.reload
+   29  vi src/StateServlet.java
+   30  vi src/GreetingServlet.java 
+   31  cp BasicWebApp/welcome.html BasicWebApp/welcome.htmx
+   32  vi BasicWebApp/welcome.htmx
+   33  vi src/HtmxServlet.java
+   34  cp src/StateServlet.java src/HtmxServlet.java
+   35  vi src/HtmxServlet.java
+   36  javac -d BasicWebApp/WEB-INF/classes/ src/HtmxServlet.java
+   37  touch BasicWebApp/.reload
+   38  vi BasicWebApp/welcome.htmx
+   39  vi src/HtmxServlet.java
+   40  vi src/GreetingServlet.java 
+   41  vi src/HtmxServlet.java
+   42  history > ../cmd0629.txt 

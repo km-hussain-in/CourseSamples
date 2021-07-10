@@ -1,0 +1,54 @@
+    4  vi  AutoBoxTest.java
+    5  javac AutoBoxTest.java 
+    6  vi  AutoBoxTest.java
+    7  javac AutoBoxTest.java 
+    8  javap -c AutoBoxTest
+    9  vi  AutoBoxTest.java
+   10  javac AutoBoxTest.java 
+   11  javap -c AutoBoxTest
+   12  vi  AutoBoxTest.java
+   13  javac AutoBoxTest.java 
+   14  javap -c AutoBoxTest
+   15  vi  AutoBoxTest.java
+   16  javac AutoBoxTest.java 
+   17  vi  AutoBoxTest.java
+   18  javac AutoBoxTest.java 
+   19  javap -c AutoBoxTest
+   20  vi  AutoBoxTest.java
+   21  javac AutoBoxTest.java 
+   22  java AutoBoxTest 24
+   23  java AutoBoxTest 31
+   24  vi  AutoBoxTest.java
+   25  javac AutoBoxTest.java 
+   26  vi  AutoBoxTest.java
+   27  javac AutoBoxTest.java 
+   28  java AutoBoxTest 24
+   29  java AutoBoxTest 31
+   30  vi  AutoBoxTest.java
+   31  javac AutoBoxTest.java 
+   32  java AutoBoxTest 24
+   33  java AutoBoxTest 31
+   34  vi  AutoBoxTest.java
+   35  cp ../Basics/Interval.java .
+   36  javac Interval.java 
+   37  vi  AutoBoxTest.java
+   38  javac AutoBoxTest.java 
+   39  java AutoBoxTest 24
+   40  java AutoBoxTest 31
+   41  java AutoBoxTest 63
+   42  java AutoBoxTest 78
+   43  vi  AutoBoxTest.java
+   44  cp AutoBoxTest.java GenMethodTest.java
+   45  cp GenMethodTest.java 
+   46  vi GenMethodTest.java 
+   47  javac GenMethodTest.java 
+   48  vi GenMethodTest.java 
+   49  javac GenMethodTest.java 
+   50  java GenMethodTest 24
+   51  java GenMethodTest 31
+   52  java GenMethodTest 67
+   53  java GenMethodTest 78
+   54  vi GenMethodTest.java 
+   55  vi  AutoBoxTest.java
+   56  vi GenMethodTest.java 
+   57  history > cmd0605.txt

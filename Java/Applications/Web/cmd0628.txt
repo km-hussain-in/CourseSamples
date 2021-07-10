@@ -1,0 +1,41 @@
+    2  cp ../Platform/ServerSocketTest.java HTTPServerTest.java
+    3  vi HTTPServerTest.java 
+    4  javac HTTPServerTest.java 
+    5  java HTTPServerTest &
+    6  curl -i localhost:6004/intc
+    7  curl -i localhost:6004/gogl
+    8  curl -i localhost:6004/amzn
+    9  vi URLClientTest.java
+   10  javac URLClientTest.java 
+   11  java URLClientTest gogl 
+   12  java URLClientTest orcl
+   13  java URLClientTest amzn
+   14  vi URLClientTest.java
+   15  vi HTTPServerTest.java 
+   16  pkill -ef "java HTTPServerTest"
+   17  . /opt/glassfish5/setenv.sh 
+   18  java -version
+   19  wget iitdac.met.edu:8001
+   20  rm index.html 
+   21  mkdir ServletTest
+   22  cd ServletTest/
+   23  mkdir BasicWebApp
+   24  mkdir BasicWebApp/WEB-INF
+   25  mkdir BasicWebApp/WEB-INF/classes
+   26  wget met.hussain.in/dac/web.xml -O BasicWebApp/WEB-INF/
+   27  wget met.hussain.in/dac/web.xml -P BasicWebApp/WEB-INF/
+   28  vi BasicWebApp/welcome.html
+   29  asadmin deploy BasicWebApp
+   30  asadmin undeploy BasicWebApp
+   31  asadmin deploy BasicWebApp
+   32  vi BasicWebApp/welcome.html
+   33  vi BasicWebApp/WEB-INF/web.xml 
+   34  asadmin undeploy BasicWebApp
+   35  asadmin deploy BasicWebApp
+   36  mkdir src
+   37  vi src/GreetingServlet.java
+   38  javac -d BasicWebApp/WEB-INF/classes/ src/GreetingServlet.java 
+   39  vi BasicWebApp/WEB-INF/web.xml 
+   40  touch BasicWebApp/.reload
+   41  asadmin undeploy BasicWebApp
+   42  history > ../cmd0628.txt

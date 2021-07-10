@@ -1,0 +1,37 @@
+    3  vi NativeMethodTest1.java 
+    4  javac -h . NativeMethodTest1.java 
+    5  java -Djava.library.path=. NativeMethodTest1 gcd 36 90
+    6  export LD_LIBRARY_PATH=.
+    7  java NativeMethodTest1 gcd 36 90
+    8  vi NativeMethodTest1.java 
+    9  javac -h . NativeMethodTest1.java 
+   10  vi NativeMethodTest1.h
+   11  vi nmtsup.cpp 
+   12  export CPATH=/opt/jdk-16.0.1/include/:/opt/jdk-16.0.1/include/linux/
+   13  c++ -shared nmtsup.cpp -o libnmtsup.so
+   14  c++ -shared -fPIC nmtsup.cpp -o libnmtsup.so
+   15  java NativeMethodTest1 reverse MondaY
+   16  vi NativeMethodTest1.java 
+   17  javac -h . NativeMethodTest1.java 
+   18  vi NativeMethodTest1.h
+   19  vi nmtsup.cpp 
+   20  c++ -shared -fPIC nmtsup.cpp -o libnmtsup.so
+   21  java NativeMethodTest1 square 1.0 2.5 3.0
+   22  vi NativeMethodTest1.java 
+   23  ls taxation.*
+   24  vi taxation.h 
+   25  vi TaxPayerBridge.java
+   26  javac -h . TaxPayerBridge.java 
+   27  vi TaxPayerBridge.h
+   28  javap -p -s TaxPayerBridge
+   29  vi tpbsup.cpp
+   30  c++ -shared -fPIC tpbsup.cpp taxation.o -o libtpbsup.so
+   31  vi NativeMethodTest2.java
+   32  javac NativeMethodTest2.java 
+   33  vi NativeMethodTest2.java
+   34  javac NativeMethodTest2.java 
+   35  java NativeMethodTest2 720000 31
+   36  java NativeMethodTest2 720000 62
+   37  java NativeMethodTest2 720000 83
+   38  java NativeMethodTest2 720000 102
+   39  history > cmd0614.txt 

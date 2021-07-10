@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+      	<jsp:useBean id="model" class="classic.web.app.ModelBean"/> 
+	<head>
+		<title>ClassicWebApp</title>
+	</head>
+	<body>
+		<h1>Welcome Customer</h1>
+		<h3>Available Products</h3>
+		<table border="1">
+			<tr>
+				<th>Product No</th>
+				<th>Unit Price</th>
+				<th>Current Stock</th>
+			</tr>
+			<c:forEach var="i" items="${model.products}">
+				<tr>
+					<td>${i.productNo}</td>
+					<td>${i.price}</td>
+					<td>${i.stock}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</body>
+</html>
+

@@ -1,0 +1,34 @@
+    5  vi ClassicWebApp/welcome.jsp 
+    6  vi src/ClockTag.java 
+    7  vi ClassicWebApp/tagtest.jsp 
+    8  vi src/ClockTag.java 
+    9  vi ClassicWebApp/WEB-INF/taglib.tld 
+   10  vi ClassicWebApp/tagtest.jsp 
+   11  vi ClassicWebApp/WEB-INF/taglib.tld 
+   12  vi src/LottoTag.java
+   13  javap javax.servlet.jsp.tagext.SimpleTag
+   14  javac -d ClassicWebApp/WEB-INF/classes/ src/LottoTag.java 
+   15  vi ClassicWebApp/WEB-INF/taglib.tld 
+   16  vi src/LottoTag.java
+   17  vi ClassicWebApp/WEB-INF/taglib.tld 
+   18  touch ClassicWebApp/.reload 
+   19  vi ClassicWebApp/tagtest.jsp 
+   20  vi src/LottoTag.java
+   21  vi ClassicWebApp/tagtest.jsp 
+   22  vi src/LottoTag.java
+   23  vi ClassicWebApp/tagtest.jsp 
+   24* javac -d  src/ModelBean.java
+   25  vi ClassicWebApp/tagtest.jsp 
+   26  vi src/ModelBean.java 
+   27  javac -d ClassicWebApp/WEB-INF/classes/ src/ModelBean.java 
+   28  vi src/ModelBean.java 
+   29  javac -d ClassicWebApp/WEB-INF/classes/ src/ModelBean.java 
+   30  touch ClassicWebApp/.reload 
+   31  vi ClassicWebApp/jstltest.jspx
+   32  vi src/ModelBean.java 
+   33  vi ClassicWebApp/jstltest.jspx
+   34  vi src/ModelBean.java 
+   35  vi ClassicWebApp/jstltest.jspx
+   36  vi ClassicWebApp/tagtest.jsp 
+   37  vi ClassicWebApp/jstltest.jspx
+   38  history > ../cmd0701.txt

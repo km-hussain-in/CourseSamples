@@ -1,0 +1,42 @@
+    2  vi ../Basics/src/Account.java 
+    3  vi ../Basics/AbstractClassTest.java 
+    4  mkdir src
+    5  vi src/EducationLoan.java
+    6  vi src/PersonalLoan.java
+    7  vi src/HomeLoan.java
+    8  javac -d . src/*.java
+    9  vi ReflectionTest2.java
+   10  vi src/HomeLoan.java
+   11  javap finance.HomeLoan
+   12  vi src/HomeLoan.java
+   13  vi ReflectionTest2.java
+   14  javac ReflectionTest2.java 
+   15  java ReflectionTest2 500000 finance.EducationLoan common
+   16  java ReflectionTest2 500000 finance.HomeLoan common
+   17  java ReflectionTest2 500000 finance.HomeLoan woman
+   18  java ReflectionTest2 500000 finance.PersonalLoan common
+   19  java ReflectionTest2 500000 finance.PersonalLoan employee
+   20  java ReflectionTest2 500000 finance.PersonalLoan handicap
+   21  java ReflectionTest2 500000 finance.CarLoan common
+   22  vi ReflectionTest2.java
+   23  vi src/MaxDuration.java
+   24  javac -d . src/MaxDuration.java
+   25  vi src/PersonalLoan.java 
+   26  javac -d . src/PersonalLoan.java 
+   27  javac -d . src/HomeLoan.java 
+   28  vi src/HomeLoan.java 
+   29  javac -d . src/HomeLoan.java 
+   30  vi src/HomeLoan.java 
+   31  javac -d . src/HomeLoan.java 
+   32  cp ReflectionTest2.java AnnotationTest.java
+   33  vi AnnotationTest.java 
+   34  javac AnnotationTest.java 
+   35  java AnnotationTest 500000 finance.EducationLoan common
+   36  java AnnotationTest 500000 finance.PersonalLoan common
+   37  java AnnotationTest 500000 finance.HomeLoan common
+   38  vi src/MaxDuration.java
+   39  vi src/HomeLoan.java 
+   40  vi src/PersonalLoan.java 
+   41  vi AnnotationTest.java 
+   42  vi MethodRefTest.java 
+   43  history > cmd0611.txt
