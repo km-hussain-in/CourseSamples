@@ -1,0 +1,50 @@
+    3  java ServerSocketTest &
+    4  ps
+    5  netstap -plt
+    6  netstat -plt
+    7  kill 32807
+    8  java ServerSocketTest &
+    9  vi SocketTest.java
+   10  vi ServerSocketTest.java 
+   11  vi SocketTest.java
+   12  vi ServerSocketTest.java 
+   13  vi SocketTest.java
+   14  javac SocketTest.java 
+   15  vi SocketTest.java
+   16  javac SocketTest.java 
+   17  vi SocketTest.java
+   18  javac SocketTest.java 
+   19  java SocketTest monitor 
+   20  java SocketTest cpu
+   21  java SocketTest printer
+   22  vi SocketTest.java
+   23  pkill -ef "java ServerSocketTest"
+   24  java SocketTest keyboard
+   25  vi SocketTest.java
+   26  vi DatagramSocketTest.java
+   27  javac DatagramSocketTest.java
+   28  vi DatagramSocketTest.java
+   29  javac DatagramSocketTest.java
+   30  java DatagramSocketTest &
+   31  vi MulticastSocketTest.java
+   32  vi DatagramSocketTest.java
+   33  javac DatagramSocketTest.java
+   34  vi MulticastSocketTest.java
+   35  ip -4 addr
+   36  vi MulticastSocketTest.java
+   37  javac MulticastSocketTest.java 
+   38  java MulticastSocketTest
+   39  pkill -ef "java DatagramSocketTest"
+   40  java MulticastSocketTest
+   41  vi DatagramSocketTest.java
+   42  vi MulticastSocketTest.java
+   43  javap java.net.MulticastSocket
+   44  vi MulticastSocketTest.java
+   45  vi DatagramSocketTest.java
+   46  javac DatagramSocketTest.java
+   47  java DatagramSocketTest &
+   48  java MulticastSocketTest
+   49  vi DatagramSocketTest.java
+   50  javac DatagramSocketTest.java
+   51  pkill -ef "java DatagramSocketTest"
+   52  history > cmd0619.txt

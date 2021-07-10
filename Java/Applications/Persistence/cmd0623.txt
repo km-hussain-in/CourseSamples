@@ -1,0 +1,16 @@
+    2  vi JDBCParamSQLTest.java
+    3  javac JDBCParamSQLTest.java 
+    4  java JDBCParamSQLTest CU102 105 4
+    5  java -cp .:/opt/jars/ojdbc6.jar JDBCParamSQLTest CU102 105 4
+    6  export CLASSPATH=.:/opt/jars/*
+    7  java JDBCParamSQLTest CU103 108 9
+    8  java JDBCParamSQLTest CU103 104 9
+    9  vi JDBCParamSQLTest.java
+   10  vi JDBCBasicSQLTest.java 
+   11  javap oracle.jdbc.OracleDriver
+   12  javap oracle.jdbc.driver.OracleDriver
+   13  javap oracle.jdbc.internal.OracleConnection
+   14  javap oracle.jdbc.internal.OracleStatment
+   15  javap oracle.jdbc.internal.OracleStatement
+   16  vi JDBCBasicSQLTest.java 
+   17  history > cmd0623.txt

@@ -1,0 +1,37 @@
+    3  java FileStreamTest2
+    4  java FileStreamTest2 monitor 8750 34
+    5  java FileStreamTest2
+    6  vi Shop.java
+    7  javac Shop.java 
+    8  vi ServerSocketTest.java
+    9  javac ServerSocketTest.java 
+   10  java ServerSocketTest
+   11  netstat -plt
+   12  kill 32669
+   13  java ServerSocketTest
+   14  netstat -pltn
+   15  vi ServerSocketTest.java
+   16  javac ServerSocketTest.java 
+   17  java FileStreamTest2
+   18  java ServerSocketTest &
+   19  kill 120892
+   20  java ServerSocketTest &
+   21  netstat -pltn
+   22  telnet 127.0.0.1 6001
+   23  vi ServerSocketTest.java
+   24  ip -4 addr
+   25  telnet 127.0.0.1 6001
+   26  pkill -ef "java ServerSocketTest"
+   27  vi ServerSocketTest.java 
+   28  javac ServerSocketTest.java 
+   29  java ServerSocketTest &
+   30  telnet 127.0.0.1 6001
+   31  pkill -ef "java ServerSocketTest"
+   32  vi ServerSocketTest.java 
+   33  javac ServerSocketTest.java 
+   34  vi ServerSocketTest.java 
+   35  javac ServerSocketTest.java 
+   36  java ServerSocketTest &
+   37  telnet 127.0.0.1 6001
+   38  vi ServerSocketTest.java 
+   39  history > cmd0618.txt

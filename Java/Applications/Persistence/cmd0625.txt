@@ -1,0 +1,27 @@
+    3  vi ../Platform/ServerSocketTest.java 
+    4  mkdir JPATransactionTest
+    5  cd JPATransactionTest/
+    6  mkdir src
+    7  mkdir META-INF
+    8  wget met.hussain.in/dac/persistence.xml -P META-INF/
+    9  wget met.hussain.in/dac/orm.xml -P META-INF
+   10  vi META-INF/persistence.xml 
+   11  cp ../JPAAnnotationTest/src/OrderEntity.java src/
+   12  vi src/OrderEntity.java 
+   13  javac -d . src/OrderEntity.java 
+   14  vi src/CounterEntity.java
+   15  javac -d . src/CounterEntity.java
+   16  vi META-INF/orm.xml 
+   17  vi src/OrderEntity.java 
+   18  vi META-INF/orm.xml 
+   19  vi src/OrderManager.java
+   20  javac -d . src/OrderManager.java
+   21  vi src/OrderManagerService.java
+   22  vi src/OrderManager.java
+   23  vi src/OrderManagerService.java
+   24  javac -d . src/OrderManagerService.java
+   25  vi src/OrderManagerService.java
+   26  javac -d . src/OrderManagerService.java
+   27  vi src/OrderManagerService.java
+   28  cd ..
+   29  history > cmd0625.txt

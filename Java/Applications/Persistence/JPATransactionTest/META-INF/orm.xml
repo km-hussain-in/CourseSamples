@@ -1,0 +1,39 @@
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd" version="2.1">
+
+	<entity class="shopping.OrderEntity">        
+		<table name="orders"/>
+		<attributes>
+			<id name="orderNo">
+				<column name="ord_no"/>
+			</id>
+			<basic name="orderDate">
+				<column name="ord_date"/>
+			</basic>
+			<basic name="customerId">
+				<column name="cust_id"/>
+			</basic>
+			<basic name="productNo">
+				<column name="pno"/>
+			</basic>
+			<basic name="quantity">
+				<column name="qty"/>
+			</basic>
+		</attributes>
+	</entity>
+	<entity class="shopping.CounterEntity">        
+		<table name="counters"/>
+		<attributes>
+			<id name="counterName">
+				<column name="ctr_name"/>
+			</id>
+			<basic name="currentValue">
+				<column name="cur_val"/>
+			</basic>
+		</attributes>
+	</entity>
+	<named-query name="findOrdersByCustomerId">
+		<query>SELECT e FROM OrderEntity e WHERE e.customerId=?1</query>
+	</named-query>
+
+</entity-mappings>
+

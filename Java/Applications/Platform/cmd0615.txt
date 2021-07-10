@@ -1,0 +1,37 @@
+    3  vi Worker.java
+    4  javac Worker.java 
+    5  vi ThreadTest1.java
+    6  javac ThreadTest1.java 
+    7  java ThreadTest1
+    8  vi ThreadTest1.java
+    9  javac ThreadTest1.java 
+   10  java ThreadTest1
+   11  vi ThreadTest1.java
+   12  javac ThreadTest1.java 
+   13  vi ThreadTest1.java
+   14  javac ThreadTest1.java 
+   15  java ThreadTest1
+   16  java ThreadTest1 70
+   17  vi ThreadTest1.java
+   18  javac ThreadTest1.java 
+   19  java ThreadTest1
+   20  java ThreadTest1 70
+   21  vi ThreadTest1.java
+   22  javac ThreadTest1.java 
+   23  java ThreadTest1 80
+   24  java ThreadTest1 120
+   25  vi ThreadTest1.java
+   26  vi ThreadTest2.java 
+   27  javac ThreadTest2.java 
+   28  java ThreadTest2
+   29  vi ThreadTest2.java 
+   30  javac ThreadTest2.java 
+   31  java ThreadTest2
+   32  vi ThreadTest2.java 
+   33  javac ThreadTest2.java 
+   34  java ThreadTest2
+   35  vi ThreadTest2.java 
+   36  javac ThreadTest2.java 
+   37  java ThreadTest2
+   38  vi ThreadTest2.java 
+   39  history > cmd0615.txt

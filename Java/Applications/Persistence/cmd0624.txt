@@ -1,0 +1,1000 @@
+   39  vi NativeMethodTest2.java
+   40  javac NativeMethodTest2.java 
+   41  java NativeMethodTest2 500000 31
+   42  java NativeMethodTest2 500000 62
+   43  java NativeMethodTest2 500000 83
+   44  java NativeMethodTest2 500000 7
+   45  vi tpbsup.cpp
+   46  history > cmd0614.txt
+   47  cp cmd0614.txt ~/Shared/Uploads/N521/Java/Language/Advanced/
+   48  cp ift.sh ~/Shared/Uploads/N521/Java/Language/Advanced/
+   49  cp NativeMethodTest?.java ~/Shared/Uploads/N521/Java/Language/Advanced/
+   50  cp *sup.cpp ~/Shared/Uploads/N521/Java/Language/Advanced/
+   51  cp taxation.* ~/Shared/Uploads/N521/Java/Language/Advanced/
+   52  ls
+   53  exit
+   54  vi NativeMethodTest1.java 
+   55  javac -h . NativeMethodTest1.java 
+   56  java -Djava.library.path=. NativeMethodTest1 gcd 36 90
+   57  export LD_LIBRARY_PATH=.
+   58  java NativeMethodTest1 gcd 36 90
+   59  vi NativeMethodTest1.java 
+   60  javac -h . NativeMethodTest1.java 
+   61  vi NativeMethodTest1.h
+   62  vi nmtsup.cpp 
+   63  export CPATH=/opt/jdk-16.0.1/include/:/opt/jdk-16.0.1/include/linux/
+   64  c++ -shared nmtsup.cpp -o libnmtsup.so
+   65  c++ -shared -fPIC nmtsup.cpp -o libnmtsup.so
+   66  java NativeMethodTest1 reverse MondaY
+   67  vi NativeMethodTest1.java 
+   68  javac -h . NativeMethodTest1.java 
+   69  vi NativeMethodTest1.h
+   70  vi nmtsup.cpp 
+   71  c++ -shared -fPIC nmtsup.cpp -o libnmtsup.so
+   72  java NativeMethodTest1 square 1.0 2.5 3.0
+   73  vi NativeMethodTest1.java 
+   74  ls taxation.*
+   75  vi taxation.h 
+   76  vi TaxPayerBridge.java
+   77  javac -h . TaxPayerBridge.java 
+   78  vi TaxPayerBridge.h
+   79  javap -p -s TaxPayerBridge
+   80  vi tpbsup.cpp
+   81  c++ -shared -fPIC tpbsup.cpp taxation.o -o libtpbsup.so
+   82  vi NativeMethodTest2.java
+   83  javac NativeMethodTest2.java 
+   84  vi NativeMethodTest2.java
+   85  javac NativeMethodTest2.java 
+   86  java NativeMethodTest2 720000 31
+   87  java NativeMethodTest2 720000 62
+   88  java NativeMethodTest2 720000 83
+   89  java NativeMethodTest2 720000 102
+   90  history > cmd0614.txt 
+   91  cp cmd0614 ~/Shared/Uploads/M521/Java/Language/Advanced/
+   92  cp cmd0614.txt ~/Shared/Uploads/M521/Java/Language/Advanced/
+   93  cp NativeMethodTest?.java ~/Shared/Uploads/M521/Java/Language/Advanced/
+   94  cp TaxPayerBridge.java ~/Shared/Uploads/M521/Java/Language/Advanced/
+   95  cp taxation.* ~/Shared/Uploads/M521/Java/Language/Advanced/
+   96  cp *.cpp ~/Shared/Uploads/M521/Java/Language/Advanced/
+   97  exit
+   98  vi Worker.java
+   99  vi ThreadTest1.java
+  100  javac ThreadTest1.java 
+  101  java ThreadTest1
+  102  vi ThreadTest1.java
+  103  javac ThreadTest1.java 
+  104  java ThreadTest1
+  105  java ThreadTest1 70
+  106  vi ThreadTest1.java
+  107  javac ThreadTest1.java 
+  108  java ThreadTest1
+  109  java ThreadTest1 70
+  110  vi ThreadTest1.java
+  111  javac ThreadTest1.java 
+  112  java ThreadTest1
+  113  vi ThreadTest1.java
+  114  javac ThreadTest1.java 
+  115  java ThreadTest1
+  116  java ThreadTest1 70
+  117  java ThreadTest1 90
+  118  vi ThreadTest1.java
+  119  java ThreadTest1 79
+  120  java ThreadTest1 81
+  121  vi ThreadTest1.java
+  122  vi ThreadTest2.java
+  123  vi Worker.java 
+  124  vi ThreadTest2.java
+  125  javac ThreadTest2.java
+  126  vi ThreadTest2.java
+  127  javac ThreadTest2.java
+  128  java ThreadTest2
+  129  vi ThreadTest2.java
+  130  javac ThreadTest2.java
+  131  java ThreadTest2
+  132  vi ThreadTest2.java
+  133  javac ThreadTest2.java
+  134  java ThreadTest2
+  135  vi ThreadTest2.java
+  136  javac ThreadTest2.java
+  137  java ThreadTest2
+  138  vi ThreadTest2.java
+  139  history > cmd0615.txt
+  140  rm *.class
+  141  ls
+  142  cp -r ../Platform/ ~/Shared/Uploads/N521/Java/
+  143  cp -r ../../Applications/ ~/Shared/Uploads/N521/Java/
+  144  exit
+  145  vi Worker.java
+  146  javac Worker.java 
+  147  vi ThreadTest1.java
+  148  javac ThreadTest1.java 
+  149  java ThreadTest1
+  150  vi ThreadTest1.java
+  151  javac ThreadTest1.java 
+  152  java ThreadTest1
+  153  vi ThreadTest1.java
+  154  javac ThreadTest1.java 
+  155  vi ThreadTest1.java
+  156  javac ThreadTest1.java 
+  157  java ThreadTest1
+  158  java ThreadTest1 70
+  159  vi ThreadTest1.java
+  160  javac ThreadTest1.java 
+  161  java ThreadTest1
+  162  java ThreadTest1 70
+  163  vi ThreadTest1.java
+  164  javac ThreadTest1.java 
+  165  java ThreadTest1 80
+  166  java ThreadTest1 120
+  167  vi ThreadTest1.java
+  168  vi ThreadTest2.java 
+  169  javac ThreadTest2.java 
+  170  java ThreadTest2
+  171  vi ThreadTest2.java 
+  172  javac ThreadTest2.java 
+  173  java ThreadTest2
+  174  vi ThreadTest2.java 
+  175  javac ThreadTest2.java 
+  176  java ThreadTest2
+  177  vi ThreadTest2.java 
+  178  javac ThreadTest2.java 
+  179  java ThreadTest2
+  180  vi ThreadTest2.java 
+  181  history > cmd0615.txt
+  182  rm *.class
+  183  cp -r ../../Applications/ ~/Shared/Uploads/M521/Java/
+  184  exit
+  185  vi AsyncTest.java
+  186  javac AsyncTest.java 
+  187  java AsyncTest
+  188  vi AsyncTest.java
+  189  javac AsyncTest.java 
+  190  java AsyncTest
+  191  vi AsyncTest.java
+  192  javac AsyncTest.java 
+  193  java AsyncTest
+  194  vi AsyncTest.java
+  195  javac AsyncTest.java 
+  196  java AsyncTest
+  197  vi AsyncTest.java
+  198  javac AsyncTest.java 
+  199  java AsyncTest
+  200  vi AsyncTest.java
+  201  javac AsyncTest.java 
+  202  java AsyncTest
+  203  vi AsyncTest.java
+  204  javac AsyncTest.java 
+  205  vi AsyncTest.java
+  206  javap java.util.concurrent.Executors
+  207  vi AsyncTest.java
+  208  javac AsyncTest.java 
+  209  vi AsyncTest.java
+  210  java AsyncTest
+  211  vi AsyncTest.java
+  212  vi ParallelTest.java
+  213  vi AsyncTest.java
+  214  vi ParallelTest.java
+  215  vi Worker.java 
+  216  javac Worker.java 
+  217  vi ParallelTest.java
+  218  javac ParallelTest.java 
+  219  vi ParallelTest.java
+  220  javac ParallelTest.java 
+  221  java ParallelTest 5
+  222  java ParallelTest 20
+  223  vi ParallelTest.java
+  224  javac ParallelTest.java 
+  225  java ParallelTest 20
+  226  java ParallelTest 10
+  227  java ParallelTest 5
+  228  cp Worker.class ~/Shared/Testing/
+  229  cp ParallelTest.class ~/Shared/Testing/
+  230  vi ParallelTest.java
+  231  vi FileStreamTest1.java
+  232  javac FileStreamTest1.java 
+  233  cp FileStreamTest1.java data1.txt
+  234  vi data1.txt 
+  235  java FileStreamTest1 data1.txt data2.txt
+  236  ls
+  237  vi data2.txt 
+  238  java FileStreamTest1 data2.txt data3.txt
+  239  vi data3.txt 
+  240  vi FileStreamTest1.java
+  241  java FileStreamTest1 data4.txt data5.txt
+  242  vi FileStreamTest1.java
+  243  history > cmd0616.txt 
+  244  cp cmd0616.txt ~/Shared/Uploads/N521/Java/Applications/Platform/
+  245  cp Worker.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  246  cp AsyncTest.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  247  cp ParallelTest.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  248  cp FileStreamTest1.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  249  exit
+  250  ls
+  251  vi Worker.java 
+  252  javac Worker.java 
+  253  vi AsyncTest.java
+  254  javac AsyncTest.java
+  255  java AsyncTest
+  256  vi AsyncTest.java
+  257  javac AsyncTest.java
+  258  java AsyncTest
+  259  vi AsyncTest.java
+  260  javac AsyncTest.java
+  261  java AsyncTest
+  262  vi AsyncTest.java
+  263  javac AsyncTest.java
+  264  java AsyncTest
+  265  vi AsyncTest.java
+  266  javap java.util.concurrent.Executors
+  267  javap java.util.concurrent.ExecutorService
+  268  vi AsyncTest.java
+  269  vi ParallelTest.java
+  270  javac ParallelTest.java 
+  271  java ParallelTest
+  272  java ParallelTest 5
+  273  java ParallelTest 20
+  274  vi ParallelTest.java
+  275  javac ParallelTest.java 
+  276  java ParallelTest 20
+  277  cp Worker.class ~/Shared/Testing/
+  278  cp ParallelTest.class ~/Shared/Testing/
+  279  vi ParallelTest.java
+  280  vi FileeStreamTest1.java
+  281  mv FileeStreamTest1.java FileStreamTest1.java 
+  282  javac FileStreamTest1.java 
+  283  vi FileStreamTest1.java
+  284  javac FileStreamTest1.java 
+  285  cp FileStreamTest1.java data1.txt
+  286  vi data1.txt 
+  287  javac FileStreamTest1.java 
+  288  vi data1.txt 
+  289  vi FileStreamTest1.java 
+  290  javac FileStreamTest1.java 
+  291  vi data1.txt 
+  292  java FileStreamTest1 data1.txt data2.txt
+  293  vi data2.txt 
+  294  java FileStreamTest1 data2.txt data3.txt
+  295  vi data3.txt 
+  296  vi FileStreamTest1.java 
+  297  vi ThreadTest1.java 
+  298  history > cmd0616.txt 
+  299  rm FileStreamTest.class 
+  300  cp FileStreamTest1.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  301  cp AsyncTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  302  cp ParallelTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  303  cp Worker.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  304  exit
+  305  vi FileStreamTest2.java 
+  306  javac FileStreamTest2.java 
+  307  java FileStreamTest2 CPU 19500 350
+  308  ls
+  309  java FileStreamTest2 motherboard 11800 200
+  310  java FileStreamTest2 hdd 4999.50 450
+  311  java FileStreamTest2 
+  312  java FileStreamTest2
+  313  vi FileStreamTest2.java 
+  314  java FileStreamTest2 keyboard 1250 600
+  315  java FileStreamTest2 keyboard
+  316  vi FileStreamTest2.java 
+  317  java FileStreamTest2
+  318  vi FileStreamTest2.java 
+  319  ls
+  320  vi FileChannelTest.java
+  321  pwd
+  322  vi FileChannelTest.java
+  323  javac FileChannelTest.java 
+  324  vi data1.txt 
+  325  java FileChannelTest data1.txt 
+  326  vi data1.txt 
+  327  java FileChannelTest data1.txt 
+  328  vi data1.txt 
+  329  vi FileChannelTest.java
+  330  javap java.nio.file.Path
+  331  vi FileChannelTest.java
+  332  history > cmd0617.txt
+  333  cp cmd0617.txt ~/Shared/Uploads/N521/Java/Applications/Platform/
+  334  cp FileStreamTest2.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  335  cp FileChannelTest.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  336  exit
+  337  vi FileStreamTest2.java
+  338  javac FileStreamTest2.java 
+  339  vi FileStreamTest2.java
+  340  javac FileStreamTest2.java 
+  341  java FileStreamTest2 CPU 19700 55
+  342  ls
+  343  java FileStreamTest2 motherboard 11800 40
+  344  java FileStreamTest2 hdd 4999.95 62
+  345  java FileStreamTest2
+  346  java FileStreamTest2 keyboard 1350 80
+  347  java FileStreamTest2
+  348  vi FileStreamTest2.java
+  349  vi store.data 
+  350  mv store.data _store.data 
+  351  ls
+  352  java FileStreamTest2
+  353  mv _store.data store.data 
+  354  java FileStreamTest2
+  355  vi FileStreamTest2.java
+  356  vi FileChannelTest.java
+  357  ls store.data 
+  358  pwd
+  359  vi FileChannelTest.java
+  360  javac FileChannelTest.java 
+  361  vi data1.txt 
+  362  java FileChannelTest data1.txt 
+  363  vi data1.txt 
+  364  java FileChannelTest data1.txt 
+  365  vi data1.txt 
+  366  vi FileChannelTest.java
+  367  history > cmd0617.txt
+  368  cp cmd0617.txt ~/Shared/Uploads/M521/Java/Applications/Platform/
+  369  cp FileStreamTest2.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  370  cp FileChannelTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  371  ls
+  372  cp data1.txt ~/Shared/Uploads/M521/Java/Applications/Platform/
+  373  exit
+  374  cd Test
+  375  ls
+  376  wget met.hussain.in/dacf20n-java.zip
+  377  mkdir Java
+  378  cd Java/
+  379  unzip ../dacf20n-java.zip 
+  380  cd Applications/Distributed/
+  381  javac DatagramSocketTest.java 
+  382  javac MulticastSocketTest.java 
+  383  java DatagramSocketTest &
+  384  java MulticastSocketTest
+  385  vi DatagramSocketTest.java 
+  386  javac DatagramSocketTest.java 
+  387  java DatagramSocketTest &
+  388  ps
+  389  kill 8434
+  390  java MulticastSocketTest
+  391  vi MulticastSocketTest.java 
+  392  javac MulticastSocketTest.java 
+  393  java MulticastSocketTest
+  394  vi MulticastSocketTest.java 
+  395  javac MulticastSocketTest.java 
+  396  java MulticastSocketTest
+  397  vi MulticastSocketTest.java 
+  398  exit
+  399  cd Test/Java/Applications/Distributed/
+  400  vi ServerSocketTest.java 
+  401  javac ServerSocketTest.java 
+  402  vi ServerSocketTest.java 
+  403  javac ServerSocketTest.java 
+  404  java ServerSocketTest &
+  405  vi SocketTest.java 
+  406  javac SocketTest.java 
+  407  java SocketTest hdd 3
+  408  java SocketTest hdd 3 localhost
+  409  telnet localhost 600`
+  410  telnet localhost 6001
+  411  ip
+  412  ip addr
+  413  ip addr |grep inet
+  414  ip -4
+  415  ip -4 addr
+  416  ip a
+  417  ip link show
+  418  ip -4 addr
+  419  netstat -lt
+  420  netstat -plnt
+  421  ps
+  422  kill 51581
+  423  netstat -plt
+  424  netstat -plt4
+  425  netstat -plt6
+  426  exit
+  427  cd Test/Java/Applications/Distributed/
+  428  java -Djava.net.prefixIP4vStack=true ServerSocketTest &
+  429  netstat -plt4
+  430  netstat -plt6
+  431  pkill -ef "java -Djava.net.prefixIP4vStack=true ServerSocketTest"
+  432  java -Djava.net.preferIP4vStack=true ServerSocketTest &
+  433  netstat -plt4
+  434  netstat -plt6
+  435  pkill -ef "java -Djava.net.preferIP4vStack=true ServerSocketTest"
+  436  export _JAVA_OPTIONS="-Djava.net.preferIPv4Stack=true"
+  437  java ServerSocketTest &
+  438  netstat -plt6
+  439  netstat -plt4
+  440  kill 109309
+  441  unset _JAVA_OPTIONS
+  442  java "-Djava.net.preferIP4vStack=true" ServerSocketTest &
+  443  netstat -plt4
+  444  ps
+  445  kill 112153
+  446  java -Djava.net.preferIPv4Stack=true ServerSocketTest &
+  447  netstat -plt4
+  448  kill 116256
+  449  exit
+  450  cd Test/Java/Applications/Distributed/
+  451  vi ServerSocketTest.java 
+  452  javac ServerSocketTest.
+  453  javac ServerSocketTest.java 
+  454  java ServerSocketTest
+  455  vi ServerSocketTest.java 
+  456  javac ServerSocketTest.java 
+  457  java ServerSocketTest
+  458  java ServerSocketTest &
+  459  kill 563
+  460  exit
+  461  java FileStreamTest2
+  462  ls
+  463  vi Shop.java
+  464  javac Shop.java 
+  465  vi Shop.java
+  466  javac Shop.java 
+  467  vi Shop.java
+  468  javac Shop.java 
+  469  vi ServerSocketTest.java
+  470  javac ServerSocketTest.java
+  471  java ServerSocketTest
+  472  vi ServerSocketTest.java
+  473  javac ServerSocketTest.java
+  474  java ServerSocketTest
+  475  netstat -lt
+  476  netstat -lnt
+  477  vi ServerSocketTest.java
+  478  javac ServerSocketTest.java 
+  479  java ServerSocketTest &
+  480  netstat -lnt
+  481  kill 128290
+  482  netstat -lnt
+  483  java ServerSocketTest &
+  484  netstat -plnt
+  485  telnet localhost 6001
+  486  vi ServerSocketTest.java
+  487  ip -4
+  488  ip -4 a
+  489  telnet localhost 6001
+  490  pkill -ef "java ServerSocketTest &"
+  491  pkill -ef "java ServerSocketTest"
+  492  vi ServerSocketTest.java 
+  493  javac ServerSocketTest.java 
+  494  java ServerSocketTest
+  495  ps
+  496  telnet localhost 6001
+  497  vi ServerSocketTest.java 
+  498  javac ServerSocketTest.java 
+  499  vi ServerSocketTest.java 
+  500  javac ServerSocketTest.java 
+  501  vi ServerSocketTest.java 
+  502  javac ServerSocketTest.java 
+  503  vi ServerSocketTest.java 
+  504  javac ServerSocketTest.java 
+  505  java ServerSocketTest &
+  506  pkill -ef "java ServerSocketTest"
+  507  java ServerSocketTest &
+  508  telnet localhost 6001
+  509  vi ServerSocketTest.java 
+  510  vi SocketTest.java
+  511  javac SocketTest.java 
+  512  java SocketTest
+  513  vi SocketTest.java
+  514  javac SocketTest.java 
+  515  java SocketTest
+  516  java FileStreamTest2
+  517  java SocketTest
+  518  vi SocketTest.java
+  519  vi ServerSocketTest.java 
+  520  history > cmd0618.txt
+  521  cp Shop.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  522  cp store.data ~/Shared/Uploads/N521/Java/Applications/Platform/
+  523  cp *SocketTest.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  524  cp cmd0618.txt ~/Shared/Uploads/N521/Java/Applications/Platform/
+  525  exit
+  526  java FileStreamTest2
+  527  java FileStreamTest2 monitor 8750 34
+  528  java FileStreamTest2
+  529  vi Shop.java
+  530  javac Shop.java 
+  531  vi ServerSocketTest.java
+  532  javac ServerSocketTest.java 
+  533  java ServerSocketTest
+  534  netstat -plt
+  535  kill 32669
+  536  java ServerSocketTest
+  537  netstat -pltn
+  538  vi ServerSocketTest.java
+  539  javac ServerSocketTest.java 
+  540  java FileStreamTest2
+  541  java ServerSocketTest &
+  542  kill 120892
+  543  java ServerSocketTest &
+  544  netstat -pltn
+  545  telnet 127.0.0.1 6001
+  546  vi ServerSocketTest.java
+  547  ip -4 addr
+  548  telnet 127.0.0.1 6001
+  549  pkill -ef "java ServerSocketTest"
+  550  vi ServerSocketTest.java 
+  551  javac ServerSocketTest.java 
+  552  java ServerSocketTest &
+  553  telnet 127.0.0.1 6001
+  554  pkill -ef "java ServerSocketTest"
+  555  vi ServerSocketTest.java 
+  556  javac ServerSocketTest.java 
+  557  vi ServerSocketTest.java 
+  558  javac ServerSocketTest.java 
+  559  java ServerSocketTest &
+  560  telnet 127.0.0.1 6001
+  561  vi ServerSocketTest.java 
+  562  history > cmd0618.txt
+  563  cp cmd0618.txt ~/Shared/Uploads/M521/Java/Applications/Platform/
+  564  cp store.data ~/Shared/Uploads/M521/Java/Applications/Platform/
+  565  cp ServerSocketTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  566  exit
+  567  java DatagramSocketTest
+  568   vi Shop.java 
+  569  vi ServerSocketTest.java 
+  570   vi Shop.java 
+  571  javac Shop.java 
+  572  vi DatagramSocketTest.java
+  573  javac DatagramSocketTest.java 
+  574  vi DatagramSocketTest.java
+  575  javac DatagramSocketTest.java 
+  576  vi DatagramSocketTest.java
+  577  javac DatagramSocketTest.java 
+  578  java DatagramSocketTest &
+  579  vi MulticastSocketTest.java
+  580  javac MulticastSocketTest.java 
+  581  vi MulticastSocketTest.java
+  582  javac MulticastSocketTest.java 
+  583  java MulticastSocketTest
+  584  ps
+  585  kill 58126
+  586  java MulticastSocketTest
+  587  vi DatagramSocketTest.java 
+  588  vi MulticastSocketTest.java 
+  589  javap java.net.MulticastSocket
+  590  vi MulticastSocketTest.java 
+  591  history > cmd0619.txt
+  592  cp cmd0619.txt ~/Shared/Uploads/N521/Java/Applications/Platform/
+  593  cp Shop.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  594  cp DatagramSocketTest.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  595  cp MulticastSocketTest.java ~/Shared/Uploads/N521/Java/Applications/Platform/
+  596  exit
+  597  java ServerSocketTest &
+  598  ps
+  599  netstap -plt
+  600  netstat -plt
+  601  kill 32807
+  602  java ServerSocketTest &
+  603  vi SocketTest.java
+  604  vi ServerSocketTest.java 
+  605  vi SocketTest.java
+  606  vi ServerSocketTest.java 
+  607  vi SocketTest.java
+  608  javac SocketTest.java 
+  609  vi SocketTest.java
+  610  javac SocketTest.java 
+  611  vi SocketTest.java
+  612  javac SocketTest.java 
+  613  java SocketTest monitor 
+  614  java SocketTest cpu
+  615  java SocketTest printer
+  616  vi SocketTest.java
+  617  pkill -ef "java ServerSocketTest"
+  618  java SocketTest keyboard
+  619  vi SocketTest.java
+  620  vi DatagramSocketTest.java
+  621  javac DatagramSocketTest.java
+  622  vi DatagramSocketTest.java
+  623  javac DatagramSocketTest.java
+  624  java DatagramSocketTest &
+  625  vi MulticastSocketTest.java
+  626  vi DatagramSocketTest.java
+  627  javac DatagramSocketTest.java
+  628  vi MulticastSocketTest.java
+  629  ip -4 addr
+  630  vi MulticastSocketTest.java
+  631  javac MulticastSocketTest.java 
+  632  java MulticastSocketTest
+  633  pkill -ef "java DatagramSocketTest"
+  634  java MulticastSocketTest
+  635  vi DatagramSocketTest.java
+  636  vi MulticastSocketTest.java
+  637  javap java.net.MulticastSocket
+  638  vi MulticastSocketTest.java
+  639  vi DatagramSocketTest.java
+  640  javac DatagramSocketTest.java
+  641  java DatagramSocketTest &
+  642  java MulticastSocketTest
+  643  vi DatagramSocketTest.java
+  644  javac DatagramSocketTest.java
+  645  pkill -ef "java DatagramSocketTest"
+  646  history > cmd0619.txt
+  647  cp cmd0619.txt ~/Shared/Uploads/M521/Java/Applications/Platform/
+  648  cp Shop.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  649  cp SocketTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  650  cp DatagramSocketTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  651  cp MulticastSocketTest.java ~/Shared/Uploads/M521/Java/Applications/Platform/
+  652  exit
+  653  cd /SoftDev/Test/
+  654  ls
+  655  sqlplus scott/tiger@xe
+  656  ~/orclxe start
+  657  vi  JDBCBasicSQLTest.java
+  658  sudo mv ~/jars/ /opt/
+  659  vi ~/.bashrc 
+  660  exec bash
+  661  javac JDBCBasicSQLTest.java 
+  662  java  JDBCBasicSQLTest
+  663  export CLASSPATH=.:/opt/jars/*
+  664  java  JDBCBasicSQLTest
+  665  vi  JDBCBasicSQLTest.java
+  666  javac  JDBCBasicSQLTest.java
+  667  java  JDBCBasicSQLTest
+  668  vi  JDBCBasicSQLTest.java
+  669  javac  JDBCBasicSQLTest.java
+  670  vi  JDBCBasicSQLTest.java
+  671  javac  JDBCBasicSQLTest.java
+  672  java  JDBCBasicSQLTest
+  673  java  JDBCBasicSQLTest 103
+  674  java  JDBCBasicSQLTest
+  675  java  JDBCBasicSQLTest  109
+  676  vi  JDBCBasicSQLTest.java
+  677  javac  JDBCBasicSQLTest.java
+  678  java  JDBCBasicSQLTest
+  679  java  JDBCBasicSQLTest 203
+  680  java  JDBCBasicSQLTest
+  681  cd JPAAnnotationTest/
+  682  ls
+  683  mv src/CounterEntity.java src/ProductEntity.java
+  684  vi src/ProductEntity.java 
+  685  rm shopping/*.class
+  686  javac -d . src/ProductEntity.java 
+  687  vi src/OrderEntity.java 
+  688  javac -d . src/OrderEntity.java 
+  689  vi src/ProductEntity.java 
+  690  javac -d . src/ProductEntity.java 
+  691  vi Program.java 
+  692  vi  ../JPAXmlTest/Program.java 
+  693  vi Program.java 
+  694  javac Program.java 
+  695  java Program
+  696  vi Program.java 
+  697  javac Program.java 
+  698  vi Program.java 
+  699  javac Program.java 
+  700  java Program
+  701  java Program 103
+  702  java Program 108
+  703  cd ..
+  704  cp JPAAnnotationTest/META-INF/persistence.xml .
+  705  vi  persistence.xml 
+  706  vi JPADataSourceTest/META-INF/persistence.xml 
+  707  vi  persistence.xml 
+  708  vi JPADataSourceTest/META-INF/orm.xml .
+  709  cp JPADataSourceTest/META-INF/orm.xml .
+  710  vi orm.xml 
+  711  cp persistence.xml ~/Shared/
+  712  cp orm.xml ~/Shared/
+  713  vi JPADataSourceTest/META-INF/orm.xml 
+  714  vi JPADataSourceTest/META-INF/persistence.xml 
+  715  exit
+  716  javap java.io.Serializable
+  717  mkdir src
+  718  vi src/Visitor.java
+  719  javac -d . src/Visitor.java
+  720  vi src/Site.java
+  721  javac -d . src/Site.java
+  722  vi src/Visitor.java 
+  723  vi src/Site.java 
+  724  javac -d . src/Site.java 
+  725  serialver tourism.Visitor
+  726  javac -d . src/Visitor.java
+  727  serialver tourism.Visitor
+  728  vi src/Site.java 
+  729  javac -d . src/Site.java 
+  730  serialver tourism.Site
+  731  vi src/Site.java 
+  732  javac -d . src/Site.java 
+  733  serialver tourism.Site
+  734  vi src/SiteObjectStore.java
+  735  javap java.io.ObjectOutputStream
+  736  vi src/SiteObjectStore.java
+  737  javap java.io.ObjectInputStreeam
+  738  javap java.io.ObjectInputStream
+  739  vi src/SiteObjectStore.java
+  740  javac -d . src/SiteObjectStore.java
+  741  vi src/SiteObjectStore.java
+  742  javac -d . src/SiteObjectStore.java
+  743  vi ObjecSerializationTest.java
+  744  mv ObjecSerializationTest.java ObjectSerializationTest.java 
+  745  javac ObjectSerializationTest.java 
+  746  vi ObjecSerializationTest.java
+  747  vi ObjectSerializationTest.java
+  748  javac ObjectSerializationTest.java 
+  749  java ObjectSerializationTest jack
+  750  java ObjectSerializationTest jill
+  751  java ObjectSerializationTest john
+  752  java ObjectSerializationTest
+  753  vi ObjectSerializationTest.java
+  754  javac ObjectSerializationTest.java 
+  755  vi ObjectSerializationTest.java
+  756  javac ObjectSerializationTest.java 
+  757  java ObjectSerializationTest jack
+  758  java ObjectSerializationTest jill
+  759  java ObjectSerializationTest john
+  760  java ObjectSerializationTest
+  761  java ObjectSerializationTest jill
+  762  java ObjectSerializationTest
+  763  vi ObjectSerializationTest.java
+  764  ls
+  765  javac -d . src/SiteObjectStore.java
+  766  vi src/SiteObjectStore.java
+  767  vi ObjectSerializationTest.java
+  768  vi src/Site.java 
+  769  vi ObjectSerializationTest.java
+  770  vi src/Visitor.java 
+  771  vi ObjectSerializationTest.java
+  772  vi src/SiteObjectStore.java
+  773  vi ObjectSerializationTest.java
+  774  java ObjectSerializationTest
+  775  java ObjectSerializationTest John
+  776  java ObjectSerializationTest
+  777  java ObjectSerializationTest jill
+  778  java ObjectSerializationTest
+  779  java ObjectSerializationTest jane
+  780  java ObjectSerializationTest
+  781  ls
+  782  history > cmd0621.txt
+  783  rm ObjectSerializationTest.class 
+  784  rm -r tourism/
+  785  ls
+  786  cp -r ../Persistence/ ~/Shared/Uploads/N521/Java/Applications/
+  787  exit
+  788  mkdir src
+  789  vi src/Visitor.java
+  790  javac -d . src/Visitor.java
+  791  vi src/Site.java
+  792  javac -d . src/Site.java
+  793  vi src/Visitor.java 
+  794  javap java.io.Serializable
+  795  vi src/Visitor.java 
+  796  javac -d . src/Visitor.java 
+  797  vi src/Site.java 
+  798  javac -d . src/Site.java 
+  799  vi src/SiteObjectStore.java
+  800  vi src/Site.java 
+  801  vi src/SiteObjectStore.java
+  802  javap java.io.ObjectOutputStream
+  803  vi src/SiteObjectStore.java
+  804  javap java.io.ObjectInputStreeam
+  805  javap java.io.ObjectInputStream
+  806  vi src/SiteObjectStore.java
+  807  javac -d . src/SiteObjectStore.java
+  808  vi src/SiteObjectStore.java
+  809  javac -d . src/SiteObjectStore.java
+  810  vi ObjectSerializationTest.java
+  811  vi src/SiteObjectStore.java
+  812  vi ObjectSerializationTest.java
+  813  javac ObjectSerializationTest.java 
+  814  java ObjectSerializationTest jill
+  815  java ObjectSerializationTest jack
+  816  java ObjectSerializationTest john
+  817  java ObjectSerializationTest jack
+  818  java ObjectSerializationTest
+  819  java ObjectSerializationTest john
+  820  java ObjectSerializationTest
+  821  java ObjectSerializationTest jane
+  822  java ObjectSerializationTest
+  823  ls
+  824  vi ObjectSerializationTest.java
+  825  javac ObjectSerializationTest.java 
+  826  java ObjectSerializationTest john
+  827  java ObjectSerializationTest
+  828  history > cmd0621.txt
+  829  rm -r tourism/
+  830  ls
+  831  cp -r ../Persistence/ ~/Shared/Uploads/M521/Java/Applications/
+  832  exit
+  833  vi CitiZoo.store 
+  834  vi JDBCBasicSQLTest.java
+  835  javac JDBCBasicSQLTest.java 
+  836  java JDBCBasicSQLTest
+  837  export CLASSPATH=.:/opt/jars/*
+  838  java JDBCBasicSQLTest
+  839  vi JDBCBasicSQLTest.java
+  840  javac JDBCBasicSQLTest.java 
+  841  java JDBCBasicSQLTest 202
+  842  vi JDBCBasicSQLTest.java
+  843  vi JDBCBasicSQLTest.java
+  844  vi JDBCBasicSQLTest.java 
+  845  javac JDBCBasicSQLTest.java 
+  846  java JDBCBasicSQLTest
+  847  java JDBCBasicSQLTest 202
+  848  java JDBCBasicSQLTest
+  849  java JDBCBasicSQLTest 302
+  850  vi JDBCBasicSQLTest.java 
+  851  javac JDBCBasicSQLTest.java 
+  852  java JDBCBasicSQLTest
+  853  java JDBCBasicSQLTest 101
+  854  java JDBCBasicSQLTest
+  855  vi JDBCBasicSQLTest.java 
+  856  history > cmd0622.txt 
+  857  cp cmd0622.txt ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  858  cp JDBCBasicSQLTest.java ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  859  ls
+  860  cp cmd0622.txt ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  861  cp JDBCBasicSQLTest.java ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  862  exit
+  863  cd ~/Shared/Support/
+  864  sftp pi@raspberrypi.lan
+  865  cd ~
+  866  ls
+  867  sftp pi@raspberrypi.lan
+  868  ping raspberrypi.lan
+  869  sftp pi@raspberrypi.lan
+  870  ssh pi@raspberrypi.lan
+  871  ping raspberrypi.lan
+  872  ssh pi@raspberrypi.lan
+  873  ping raspberrypi.lan
+  874  ping raspberrypi.lan
+  875  ssh pi@raspberrypi.lan
+  876  ping raspberrypi.lan
+  877  ssh pi@raspberrypi.lan
+  878  cd Test/
+  879  ssh pi@raspberrypi.lan
+  880  q
+  881  ping raspberrypi.lan
+  882  ssh pi@raspberrypi.lan
+  883  ping raspberrypi.lan
+  884  ssh pi@raspberrypi.lan
+  885  exit
+  886  vi JDBCBasicSQLTest.java
+  887  javac JDBCBasicSQLTest.java 
+  888  vi JDBCBasicSQLTest.java
+  889  javac JDBCBasicSQLTest.java 
+  890  java JDBCBasicSQLTest
+  891  export CLASSPATH=.:/opt/jars/*
+  892  java JDBCBasicSQLTest
+  893  java JDBCBasicSQLTest 203
+  894  java JDBCBasicSQLTest
+  895  java JDBCBasicSQLTest 302
+  896  vi JDBCBasicSQLTest.java
+  897  javac JDBCBasicSQLTest.java 
+  898  java JDBCBasicSQLTest
+  899  java JDBCBasicSQLTest 102
+  900  java JDBCBasicSQLTest
+  901  java JDBCBasicSQLTest 201
+  902  vi JDBCBasicSQLTest.java
+  903  history cmd0622.txt 
+  904  history > cmd0622.txt 
+  905  cp cmd0622.txt ~/Shared/Uploads/M521/Java/Applications/Persistence/
+  906  cp JDBCBasicSQLTest.java ~/Shared/Uploads/M521/Java/Applications/Persistence/
+  907  exit
+  908  vi JDBCParamSQLTest.java
+  909  javac JDBCParamSQLTest.java
+  910  java JDBCParamSQLTest CU104 103 9
+  911  java -cp .:/opt/jars/ojdbc6.jar JDBCParamSQLTest CU104 103 9
+  912  export CLASSPATH=.:/opt/jars/*
+  913  java JDBCParamSQLTest CU101 106 3
+  914  java JDBCParamSQLTest CU101 105 3
+  915  vi JDBCParamSQLTest.java
+  916  cp JDBCParamSQLTest.java JDBCStorProcTest.java
+  917  vi JDBCStorProcTest.java 
+  918  javap java.sql.Types
+  919  vi JDBCStorProcTest.java 
+  920  javac JDBCStorProcTest.java 
+  921  java JDBCStorProcTest CU102 104 6
+  922  java JDBCStorProcTest CU105 101 3
+  923  java JDBCStorProcTest CU103 101 3
+  924  vi JDBCStorProcTest.java 
+  925  vi JDBCParamSQLTest.java
+  926  history > cmd0623.txt
+  927  cp cmd0623.txt ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  928  cp JDBCParamSQLTest.java ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  929  cp JDBCStorProcTest.java ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  930  exit
+  931  vi JDBCParamSQLTest.java
+  932  javac JDBCParamSQLTest.java 
+  933  java JDBCParamSQLTest CU102 105 4
+  934  java -cp .:/opt/jars/ojdbc6.jar JDBCParamSQLTest CU102 105 4
+  935  export CLASSPATH=.:/opt/jars/*
+  936  java JDBCParamSQLTest CU103 108 9
+  937  java JDBCParamSQLTest CU103 104 9
+  938  vi JDBCParamSQLTest.java
+  939  vi JDBCBasicSQLTest.java 
+  940  javap oracle.jdbc.OracleDriver
+  941  javap oracle.jdbc.driver.OracleDriver
+  942  javap oracle.jdbc.internal.OracleConnection
+  943  javap oracle.jdbc.internal.OracleStatment
+  944  javap oracle.jdbc.internal.OracleStatement
+  945  vi JDBCBasicSQLTest.java 
+  946  history > cmd0623.txt
+  947  cp cmd0623.txt ~/Shared/Uploads/M521/Java/Applications/Persistence/
+  948  cp JDBCParamSQLTest.java ~/Shared/Uploads/M521/Java/Applications/Persistence/
+  949  exit
+  950  ls
+  951  vi JDBCBasicSQLTest.java 
+  952  vi ObjectSerializationTest.java 
+  953  ls /opt/jars/
+  954  mkdir JPAAnnotationTest
+  955  cd JPAAnnotationTest/
+  956  mkdir META-INF
+  957  wget met.hussain.in/dac/persistence.xml -P META-INF/
+  958  vi META-INF/persistence.xml 
+  959  export CLASSPATH=.:/opt/jars/*
+  960  mkdir src
+  961  vi src/OrderEntity.java
+  962  javac -d . src/OrderEntity.java 
+  963  unset CLASSPATH
+  964  javac -d . src/OrderEntity.java 
+  965  export CLASSPATH=.:/opt/jars/*
+  966  javac -d . src/OrderEntity.java 
+  967  vi src/ProductEntity.java
+  968  javac -d . src/ProductEntity.java
+  969  vi src/ProductEntity.java
+  970  javac -d . src/ProductEntity.java
+  971  vi META-INF/persistence.xml 
+  972  vi src/ProductEntity.java
+  973  vi META-INF/persistence.xml 
+  974  vi Client.java
+  975  vi META-INF/persistence.xml 
+  976  vi Client.java
+  977  javac Client.java 
+  978  java Client
+  979  vi Client.java
+  980  javac Client.java 
+  981  vi Client.java
+  982  javac Client.java 
+  983  java Client
+  984  vi Client.java
+  985  javac Client.java 
+  986  java Client
+  987  java Client 102
+  988  java Client 109
+  989  vi Client.java
+  990  vi src/OrderEntity.java 
+  991  vi src/ProductEntity.java 
+  992  vi META-INF/persistence.xml 
+  993  vi Client.java 
+  994  cd ..
+  995  history > cmd0624.txt 
+  996  rm -r JPAAnnotationTest/shopping/
+  997  cp cmd0624.txt ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  998  cp -r JPAAnnotationTest/ ~/Shared/Uploads/N521/Java/Applications/Persistence/
+  999  exit
+ 1000  cd  /SoftDev/DAC0521M/Java/Applications/Persistence/
+ 1001  cp JDBCParamSQLTest.java JDBCStorProcTest.java
+ 1002  vi JDBCStorProcTest.java 
+ 1003  javac JDBCStorProcTest.java 
+ 1004  java JDBCStorProcTest CU101 103 8
+ 1005  export CLASSPATH=.:/opt/jars/*
+ 1006  java JDBCStorProcTest CU101 103 8
+ 1007  java JDBCStorProcTest CU109 103 8
+ 1008  mkdir JPAAnnotationTest
+ 1009  cd JPAAnnotationTest/
+ 1010  mkdir src
+ 1011  mkdir META-INF
+ 1012  wget met.hussain.in/dac/persistence.xml -P META-INF
+ 1013  vi META-INF/persistence.xml 
+ 1014  vi src/OrderEntity.java
+ 1015  javac -d . src/OrderEntity.java
+ 1016  ls /opt/jars/*
+ 1017  unset CLASSPATH
+ 1018  javac -d . src/OrderEntity.java
+ 1019  export CLASSPATH=.:/opt/jars/*
+ 1020  javac -d . src/OrderEntity.java
+ 1021  vi src/ProductEntity.java
+ 1022  vi src/OrderEntity.java
+ 1023  vi src/ProductEntity.java
+ 1024  javac -d . src/ProductEntity.java
+ 1025  vi Client.java
+ 1026  javap javax.persistence.Persistence
+ 1027  vi Client.java
+ 1028  javac Client.java 
+ 1029  java Client
+ 1030  vi Client.java
+ 1031  javac Client.java 
+ 1032  java Client
+ 1033  vi Client.java
+ 1034  javac Client.java 
+ 1035  java Client
+ 1036  java Client 101
+ 1037  vi Client.java
+ 1038  history > ../cmd0624.txt

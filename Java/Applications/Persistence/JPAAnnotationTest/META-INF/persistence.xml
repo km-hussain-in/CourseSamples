@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+   <persistence-unit name="ShopPU" transaction-type="RESOURCE_LOCAL">
+     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+     <exclude-unlisted-classes>true</exclude-unlisted-classes>
+     <class>shopping.OrderEntity</class>
+     <class>shopping.ProductEntity</class>
+     <properties>
+       <property name="eclipselink.logging.level" value="OFF" /> 
+       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost/xe"/>
+       <property name="javax.persistence.jdbc.user" value="scott"/>
+       <property name="javax.persistence.jdbc.password" value="tiger"/>
+     </properties>
+   </persistence-unit>
+</persistence>
+

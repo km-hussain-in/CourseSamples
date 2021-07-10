@@ -1,0 +1,19 @@
+    2  vi JDBCBasicSQLTest.java
+    3  javac JDBCBasicSQLTest.java 
+    4  vi JDBCBasicSQLTest.java
+    5  javac JDBCBasicSQLTest.java 
+    6  java JDBCBasicSQLTest
+    7  export CLASSPATH=.:/opt/jars/*
+    8  java JDBCBasicSQLTest
+    9  java JDBCBasicSQLTest 203
+   10  java JDBCBasicSQLTest
+   11  java JDBCBasicSQLTest 302
+   12  vi JDBCBasicSQLTest.java
+   13  javac JDBCBasicSQLTest.java 
+   14  java JDBCBasicSQLTest
+   15  java JDBCBasicSQLTest 102
+   16  java JDBCBasicSQLTest
+   17  java JDBCBasicSQLTest 201
+   18  vi JDBCBasicSQLTest.java
+   19  history cmd0622.txt 
+   20  history > cmd0622.txt 

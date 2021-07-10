@@ -1,0 +1,49 @@
+    2  ls
+    3  vi Worker.java 
+    4  javac Worker.java 
+    5  vi AsyncTest.java
+    6  javac AsyncTest.java
+    7  java AsyncTest
+    8  vi AsyncTest.java
+    9  javac AsyncTest.java
+   10  java AsyncTest
+   11  vi AsyncTest.java
+   12  javac AsyncTest.java
+   13  java AsyncTest
+   14  vi AsyncTest.java
+   15  javac AsyncTest.java
+   16  java AsyncTest
+   17  vi AsyncTest.java
+   18  javap java.util.concurrent.Executors
+   19  javap java.util.concurrent.ExecutorService
+   20  vi AsyncTest.java
+   21  vi ParallelTest.java
+   22  javac ParallelTest.java 
+   23  java ParallelTest
+   24  java ParallelTest 5
+   25  java ParallelTest 20
+   26  vi ParallelTest.java
+   27  javac ParallelTest.java 
+   28  java ParallelTest 20
+   29  cp Worker.class ~/Shared/Testing/
+   30  cp ParallelTest.class ~/Shared/Testing/
+   31  vi ParallelTest.java
+   32  vi FileeStreamTest1.java
+   33  mv FileeStreamTest1.java FileStreamTest1.java 
+   34  javac FileStreamTest1.java 
+   35  vi FileStreamTest1.java
+   36  javac FileStreamTest1.java 
+   37  cp FileStreamTest1.java data1.txt
+   38  vi data1.txt 
+   39  javac FileStreamTest1.java 
+   40  vi data1.txt 
+   41  vi FileStreamTest1.java 
+   42  javac FileStreamTest1.java 
+   43  vi data1.txt 
+   44  java FileStreamTest1 data1.txt data2.txt
+   45  vi data2.txt 
+   46  java FileStreamTest1 data2.txt data3.txt
+   47  vi data3.txt 
+   48  vi FileStreamTest1.java 
+   49  vi ThreadTest1.java 
+   50  history > cmd0616.txt 

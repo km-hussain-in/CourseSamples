@@ -1,0 +1,41 @@
+    5  mkdir src
+    6  vi src/Visitor.java
+    7  javac -d . src/Visitor.java
+    8  vi src/Site.java
+    9  javac -d . src/Site.java
+   10  vi src/Visitor.java 
+   11  javap java.io.Serializable
+   12  vi src/Visitor.java 
+   13  javac -d . src/Visitor.java 
+   14  vi src/Site.java 
+   15  javac -d . src/Site.java 
+   16  vi src/SiteObjectStore.java
+   17  vi src/Site.java 
+   18  vi src/SiteObjectStore.java
+   19  javap java.io.ObjectOutputStream
+   20  vi src/SiteObjectStore.java
+   21  javap java.io.ObjectInputStreeam
+   22  javap java.io.ObjectInputStream
+   23  vi src/SiteObjectStore.java
+   24  javac -d . src/SiteObjectStore.java
+   25  vi src/SiteObjectStore.java
+   26  javac -d . src/SiteObjectStore.java
+   27  vi ObjectSerializationTest.java
+   28  vi src/SiteObjectStore.java
+   29  vi ObjectSerializationTest.java
+   30  javac ObjectSerializationTest.java 
+   31  java ObjectSerializationTest jill
+   32  java ObjectSerializationTest jack
+   33  java ObjectSerializationTest john
+   34  java ObjectSerializationTest jack
+   35  java ObjectSerializationTest
+   36  java ObjectSerializationTest john
+   37  java ObjectSerializationTest
+   38  java ObjectSerializationTest jane
+   39  java ObjectSerializationTest
+   40  ls
+   41  vi ObjectSerializationTest.java
+   42  javac ObjectSerializationTest.java 
+   43  java ObjectSerializationTest john
+   44  java ObjectSerializationTest
+   45  history > cmd0621.txt
