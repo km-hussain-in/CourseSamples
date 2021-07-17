@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BasicWebApp</title>
+	</head>
+	<body>
+		<h1>Welcome Visitor</h1>
+		<b>Current Time: </b><span id="timeOutput"></span>
+		<script>
+			window.onload = async function(){
+				let response = await fetch("/rest/time/now");
+				document.getElementById("timeOutput").innerText = await response.text();
+			};
+		</script>
+	</body>
+</html>
+
