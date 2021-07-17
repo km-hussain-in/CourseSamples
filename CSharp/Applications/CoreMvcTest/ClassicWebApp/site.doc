@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVisitor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Visitor>
+    <Id>Jack</Id>
+    <Frequency>2</Frequency>
+    <Recent>2021-07-13T10:45:51.4476554+00:00</Recent>
+  </Visitor>
+  <Visitor>
+    <Id>Jill</Id>
+    <Frequency>1</Frequency>
+    <Recent>2021-07-13T10:45:42.3991282+00:00</Recent>
+  </Visitor>
+</ArrayOfVisitor>

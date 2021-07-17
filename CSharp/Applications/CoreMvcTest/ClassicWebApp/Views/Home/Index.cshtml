@@ -1,0 +1,35 @@
+@model IEnumerable<ClassicWebApp.Models.Visitor>
+
+<!DOCTYYPE html>
+<html>
+	<head>
+		<title>ClassicWebApp</title>
+	</head>	
+	<body>
+		<h1>Our Visitors</h1>
+		<table border="1">
+			<tr>
+				<th>Visitor Name</th>
+				<th>Visit Count</th>
+				<th>Last Visit</th>
+			</tr>
+			@foreach(var item in Model)
+			{
+				<tr>
+					<td>@Html.DisplayFor(i => item.Id)</td>
+					<td>@Html.DisplayFor(i => item.Frequency)</td>
+					<td>@Html.DisplayFor(i => item.Recent)</td>
+				</tr>
+			}
+		</table>
+		<p>
+			@using(Html.BeginForm("Register", "Home"))
+			{
+				<b>Name: </b>
+				<input type="text" name="person" required="required"/>
+				<input type="submit" value="Register"/>
+			}
+		</p>
+	</body>
+</html>
+
