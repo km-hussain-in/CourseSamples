@@ -36,7 +36,7 @@ static class Program
 		Console.WriteLine($"{t.Name} {name} = {obj}");
 	}
 
-	public static bool Present(object x, params object[] source)
+	public static bool Search(object x, params object[] source)
 	{
 		foreach(object y in source)
 		{
@@ -66,7 +66,7 @@ static class Program
 			int m = int.Parse(args[0]);
 			int s = int.Parse(args[1]);
 			var f = new Interval(m, s);
-			if(Present(f, a, b, c, e))
+			if(Search(f, a, b, c, e))
 				Console.WriteLine("Matching Interval found.");
 			else
 				Console.WriteLine("No match found!");
