@@ -1,47 +1,40 @@
 using System;
+using System.IO.Pipes;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
 namespace GenHostTest
 {
-	public interface IMessageProducer
+	public interface IDataProcessor			
 	{
-		(string, int) ProduceMessage(int id);
+		void ProcessBuffer(byte[] data, int size);
 	}
 
     public class Worker : BackgroundService
     {
-		private readonly IMessageProducer _producer;
+		private readonly IDataProcessor _processor;
 
-        public Worker(IMessageProducer producer)
+        public Worker(IDataProcessor processor)
         {
-            _producer = producer;
+            _processor = processor;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-			Console.WriteLine("Message store service started");
-			try
+			using var server = new NamedPipeServerStream("ghtpipe", PipeDirection.InOut);
+			Console.WriteLine("Service started...");
+			byte[] buffer = new byte[80];
+			while(!stoppingToken.IsCancellationRequested)
 			{
-            	for(int i = 1; !stoppingToken.IsCancellationRequested; ++i)
-            	{
-					var (text, time) = _producer.ProduceMessage(i);
-					StoreMessage(text);
-					await Task.Delay(time, stoppingToken);
-				}
-			}
-            catch(OperationCanceledException)
-			{
-				Console.WriteLine("Message store service stopped");
+				await server.WaitForConnectionAsync(stoppingToken);
+				int n = await server.ReadAsync(buffer, 0, buffer.Length, stoppingToken);
+				_processor.ProcessBuffer(buffer, n);
+				await server.WriteAsync(buffer, 0, n, stoppingToken);
+				server.Disconnect();
 			}
         }
 
-		private void StoreMessage(string text)
-		{
-			using var writer = new System.IO.StreamWriter("msg.store");
-			writer.WriteLine(text);
-		}
     }
 }
 

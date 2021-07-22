@@ -7,16 +7,12 @@ using Microsoft.Extensions.Hosting;
 
 namespace GenHostTest
 {
-	class StockExchange : IMessageProducer
+	class XorEncoder : IDataProcessor
 	{
-		Random rdm = new ();
-
-		public (string, int) ProduceMessage(int id)
+		public void ProcessBuffer(byte[] data, int size)
 		{
-			string[] symbols = {"APPL", "GOGL", "INTC", "MSFT", "ORCL"};
-			int i = id % symbols.Length;
-			double p = 0.01 * rdm.Next(1000, 10000);
-			return ($"{symbols[i]} = {p:0.00}", 5000);
+			for(int i = 0; i < size; ++i)
+				data[i] = (byte)(data[i] ^ '#');
 		}
 	}
 
@@ -24,14 +20,17 @@ namespace GenHostTest
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+			if(args.Length == 0)
+            	CreateHostBuilder(args).Build().Run();
+			else
+				ClientSupport.Run(args[0]);
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-					services.AddTransient<IMessageProducer, StockExchange>();
+					services.AddTransient<IDataProcessor, XorEncoder>();
                     services.AddHostedService<Worker>();
                 });
     }
