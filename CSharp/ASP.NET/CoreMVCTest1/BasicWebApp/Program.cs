@@ -24,3 +24,5 @@ namespace BasicWebApp
                 });
     }
 }
+
+//export/set ASPNETCORE_URLS="http://*:8086"
