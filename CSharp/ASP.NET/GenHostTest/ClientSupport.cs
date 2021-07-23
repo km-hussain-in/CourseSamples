@@ -6,10 +6,10 @@ namespace GenHostTest
 {
 	class ClientSupport
 	{
-		public static void Run(string text)
+		public static void Run(string[] args)
 		{
-			using var client = new NamedPipeClientStream(".", "ghtpipe", PipeDirection.InOut);
-			byte[] request = Encoding.UTF8.GetBytes(text);
+			using var client = new NamedPipeClientStream(".", args[0], PipeDirection.InOut);
+			byte[] request = Encoding.UTF8.GetBytes(args[1]);
 			try
 			{
 				client.Connect(5000);
