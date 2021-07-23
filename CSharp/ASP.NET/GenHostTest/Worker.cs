@@ -8,7 +8,7 @@ namespace GenHostTest
 {
 	public interface IDataProcessor			
 	{
-		void ProcessBuffer(byte[] data, int size);
+		Task<byte[]> ProcessBufferAsync(byte[] data, int size);
 	}
 
     public class Worker : BackgroundService
@@ -29,8 +29,8 @@ namespace GenHostTest
 			{
 				await server.WaitForConnectionAsync(stoppingToken);
 				int n = await server.ReadAsync(buffer, 0, buffer.Length, stoppingToken);
-				_processor.ProcessBuffer(buffer, n);
-				await server.WriteAsync(buffer, 0, n, stoppingToken);
+				byte[] result = await _processor.ProcessBufferAsync(buffer, n);
+				await server.WriteAsync(result, 0, result.Length, stoppingToken);
 				server.Disconnect();
 			}
         }

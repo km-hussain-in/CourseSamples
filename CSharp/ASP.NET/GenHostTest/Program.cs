@@ -9,10 +9,17 @@ namespace GenHostTest
 {
 	class XorEncoder : IDataProcessor
 	{
-		public void ProcessBuffer(byte[] data, int size)
+		private byte[] ProcessBuffer(byte[] data, int size)
 		{
+			byte[] buffer = new byte[size];
 			for(int i = 0; i < size; ++i)
-				data[i] = (byte)(data[i] ^ '#');
+				buffer[i] = (byte)(data[i] ^ '#');
+			return buffer;	
+		}
+
+		public Task<byte[]> ProcessBufferAsync(byte[] data, int size)
+		{
+			return Task<byte[]>.Run(() => ProcessBuffer(data, size));
 		}
 	}
 
