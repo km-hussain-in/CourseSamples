@@ -18,7 +18,8 @@ namespace BasicWebApp
         public void ConfigureServices(IServiceCollection services)
         {
 			//services.AddSingleton<ICounterService, SimpleCounter>();
-			services.AddSingleton<ICounterService>(new CyclicCounter(5));
+			services.AddSingleton<ICounterService, CyclicCounter>()
+				.Configure<CyclicCounterOptions>(option => option.Limit = 5);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
