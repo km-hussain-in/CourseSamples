@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Collections.Generic;
+using Microsoft.Extensions.Options;
 
 namespace BasicWebApp
 {
@@ -24,12 +25,17 @@ namespace BasicWebApp
 		}
 	}
 
+	public class CyclicCounterOptions
+	{
+		public int Limit { get; set; }
+	}
+
 	public class CyclicCounter : ICounterService
 	{
 		private readonly int limit;
 		private int count = -1;
 
-		public CyclicCounter(int limit) => this.limit = limit;
+		public CyclicCounter(IOptions<CyclicCounterOptions> options) => limit = options.Value.Limit;
 
 		public int CountNext(string name)
 		{
