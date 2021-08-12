@@ -2,7 +2,12 @@ namespace Banking
 {
 	public static class Banker
 	{
-		private static long nid = System.DateTime.Now.Ticks % 1000000;
+		private static long nid;
+
+		static Banker()
+		{
+			nid = System.DateTime.Now.Ticks % 1000000;
+		}
 
 		public static Account OpenCurrentAccount()
 		{

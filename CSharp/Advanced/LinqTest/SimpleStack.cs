@@ -1,6 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
+
 namespace LinqTest
 {
-	partial class SimpleStack<V>
+	partial class SimpleStack<V> : IEnumerable<V>
 	{
 		class Node
 		{
@@ -26,6 +29,16 @@ namespace LinqTest
 		{
 			return top == null;
 		}
+
+		public void Add(V item) => Push(item);
+
+		public IEnumerator<V> GetEnumerator()
+		{
+			for(Node n = top; n != null; n = n.Below)
+				yield return n.Value;
+		}
+
+		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 	}
 }
 

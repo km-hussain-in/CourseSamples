@@ -13,14 +13,24 @@ namespace InterfaceTest2
 		}
 	}
 
+	static class Consumer
+	{
+		public static void Consume(this IConsumer that, int option)
+		{
+			try
+			{
+				that.Apply(option);
+			}
+			finally
+			{
+				that.Dispose();
+			}
+		}
+	}
+
 	class ResourceConsumer : IConsumer
 	{
 		private string id;
-
-		static ResourceConsumer()
-		{
-			Console.WriteLine("ResourceConsumer type initialized.");
-		}
 
 		public ResourceConsumer(string name)
 		{
@@ -30,6 +40,8 @@ namespace InterfaceTest2
 
 		public void Apply(int option)
 		{
+			if(option <= 0)
+				throw new ArgumentException("option");
 			if(id != null)
 				Console.WriteLine($"{id} resource consumed with action<{option}>.");
 		}
@@ -46,25 +58,20 @@ namespace InterfaceTest2
 
     class Program
     {
-		static void Run(string cmd)
-		{
-			using(IConsumer c = new ResourceConsumer("Third"))
-			{
-				c.ApplyAll(int.Parse(cmd));
-			}
-		}
-
         static void Main(string[] args)
         {
-            IConsumer a = new ResourceConsumer("First");
-			a.Apply(1);
-			a.Dispose();
-            IConsumer b = new ResourceConsumer("Second");
-			b.Apply(2);
-			b.Dispose();
 			try
 			{
-				Run(args[0]);
+            	IConsumer a = new ResourceConsumer("First");
+				a.Apply(1);
+				a.Dispose();
+				int m = int.Parse(args[0]);
+            	IConsumer b = new ResourceConsumer("Second");
+				b.Consume(m);
+				int n = int.Parse(args[1]);
+				using(IConsumer c = new ResourceConsumer("Third")){
+					c.ApplyAll(n);
+				}
 			}
 			catch {}
         }

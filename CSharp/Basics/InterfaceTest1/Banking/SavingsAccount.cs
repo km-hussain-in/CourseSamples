@@ -21,10 +21,12 @@ namespace Banking
 			Balance -= amount;
 		}
 
-		public decimal GetInterest(int months)
+		public decimal AddInterest(int months)
 		{
 			decimal rate = Balance < 3 * MinBal ? 3.5M : 4.0M;
-			return Balance * months * rate / 1200;
+			decimal interest = Balance * months * rate / 1200;
+			Balance += interest;
+			return interest;
 		}
 	}
 }

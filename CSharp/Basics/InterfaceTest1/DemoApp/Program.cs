@@ -3,22 +3,6 @@ using System;
 
 namespace DemoApp
 {
-	static class BankHelper
-	{
-		public static Account GetNewAccount(decimal amount, bool business=false)
-		{
-			Account acc = business ? Banker.OpenCurrentAccount() : Banker.OpenSavingsAccount();
-			acc.Deposit(amount);
-			return acc;
-		}
-
-		public static void AddAnnualInterest(this IProfitable target)
-		{
-			decimal interest = target.GetInterest(12);
-			Account acc = (Account) target;
-			acc.Deposit(interest);
-		}
-	}
 
     class Program
     {
@@ -27,18 +11,23 @@ namespace DemoApp
 			foreach(Account entry in entries)
 			{
 				IProfitable p = entry as IProfitable;
-				p?.AddAnnualInterest();
+				p?.AddInterest(12);
 			}
 		}
 
         static void Main(string[] args)
         {
 			Account[] bank = new Account[5];	
-			bank[0] = BankHelper.GetNewAccount(5000);
-			bank[1] = BankHelper.GetNewAccount(20000, true);
-			bank[2] = BankHelper.GetNewAccount(25000);
-			bank[3] = BankHelper.GetNewAccount(40000, true);
-			bank[4] = BankHelper.GetNewAccount(45000);
+			bank[0] = Banker.OpenSavingsAccount();
+			bank[0].Deposit(5000);
+			bank[1] = Banker.OpenCurrentAccount();
+			bank[1].Deposit(20000);
+			bank[2] = Banker.OpenSavingsAccount();
+			bank[2].Deposit(25000);
+			bank[3] = Banker.OpenCurrentAccount();
+			bank[3].Deposit(40000);
+			bank[4] = Banker.OpenSavingsAccount();
+			bank[4].Deposit(45000);
 			PayAnnualInterest(bank);
 			foreach(var acc in bank)
 				Console.WriteLine("{0}\t{1:0.00}", acc.Id, acc.Balance);

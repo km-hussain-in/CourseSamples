@@ -1,5 +1,6 @@
 using Finance;
 using System;
+using System.Reflection;
 
 namespace DemoApp
 {
@@ -12,10 +13,10 @@ namespace DemoApp
 			double p = double.Parse(args[0]);
 			Type t = Type.GetType("Finance." + args[1] + ",FinLib");
 			object policy = Activator.CreateInstance(t);
-			string op = args.Length < 3 ? "GetInterestRate" : "GetInterestRateFor" + args[2];
-			var rate = (RateFunc)Delegate.CreateDelegate(typeof(RateFunc), policy, op);
-			var mda = (MaxDurationAttribute)Attribute.GetCustomAttribute(rate.Method, typeof(MaxDurationAttribute));
+			var op = t.GetMethod(args.Length < 3 ? "GetInterestRate" : "GetInterestRateFor" + args[2]);
+			var mda = op.GetCustomAttribute<MaxDurationAttribute>();
 			int m = mda?.Limit ?? 10;
+			var rate = op.CreateDelegate<RateFunc>(policy);
 			for(int n = 1; n <= m; ++n)
 			{
 				float i = rate(p, n) / 1200;

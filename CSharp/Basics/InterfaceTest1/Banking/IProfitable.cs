@@ -2,7 +2,7 @@ namespace Banking
 {
 	public interface IProfitable
 	{
-		decimal GetInterest(int months);
+		decimal AddInterest(int months);
 	}
 }
 

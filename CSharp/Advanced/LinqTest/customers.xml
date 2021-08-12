@@ -1,0 +1,27 @@
+<customers>
+	<contact name="jack">
+		<city>Mumbai</city>
+		<zip>400099</zip>
+	</contact>
+	<contact name="jill">
+		<city>Pune</city>
+		<zip>411038</zip>
+	</contact>
+	<contact name="john">
+		<city>Nashik</city>
+		<zip>422003</zip>
+	</contact>
+	<contact name="jane">
+		<city>Mumbai</city>
+		<zip>400058</zip>
+	</contact>
+	<contact name="jeff">
+		<city>Pune</city>
+		<zip>411004</zip>
+	</contact>
+	<contact name="john">
+		<city>Mumbai</city>
+		<zip>400001</zip>
+	</contact>
+</customers>
+

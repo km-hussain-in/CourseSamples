@@ -1,67 +1,52 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using static System.Linq.Enumerable;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace LinqTest
 {
-	partial class SimpleStack<V> : IEnumerable<V>
-	{
-
-		public IEnumerator<V> GetEnumerator()
-		{
-			for(Node n = top; n != null; n = n.Below)
-				yield return n.Value;
-		}
-
-		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-	}
-
-	record Investment(int Period, double Amount);
-
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			int limit = args.Length > 0 ? int.Parse(args[0]) : 0;
-			var store = new SimpleStack<Investment>();
-			store.Push(new Investment(3, 71000));
-			store.Push(new(5, 82000));
-			store.Push(new(4, 63000));
-			store.Push(new(2, 34000));
-			store.Push(new(6, 45000));
-			store.Push(new(1, 56000));
-			/*
-			foreach(var i in store)
+			var shop = new Shop();
+			if(args[0] == "outlets")
 			{
-				if(i.Period > limit)
-				{
-					double cash = i.Amount * Math.Pow(1.08, i.Period);
-					Console.WriteLine("{0}\t{1}\t{2:0.00}", i.Amount, 12 * i.Period, cash);
-				}
+				var outlets = shop.GetOutlets()
+								.Where(e => e.Item1 == args[1])
+								.Select(e => e.Item2);
+				foreach(string city in outlets)
+					Console.WriteLine(city);
 			}
-			*/
-			/*
-			var selection = store.Where(i => i.Period > limit)
-							.Select(i => new 
-							{
-								Invest = i.Amount,
-								Months = 12 * i.Period,
-								Cash = i.Amount * Math.Pow(1.07, i.Period)
-							});
-			*/
-			var selection = from i in store
-							where i.Period > limit
-							select new
-							{
-								Invest = i.Amount,
-								Months = 12 * i.Period,
-								Cash = i.Amount * Math.Pow(1.07, i.Period)
-							};
-			foreach(var i in selection)
-					Console.WriteLine("{0}\t{1}\t{2:0.00}", i.Invest, i.Months, i.Cash);
-
+			else if(args[0] == "orders")
+			{
+				var orders = shop.GetOrders();
+				var selection = from e in orders
+								where e.Quantity >= int.Parse(args[1])
+								orderby e.Date
+								select new 
+								{
+									Person = e.Customer.ToUpper(),
+									Billed = DateTime.Parse(e.Date),
+									Payment = 1000 * e.Quantity
+								};
+				foreach(var entry in selection)
+					Console.WriteLine($"{entry.Person}\t{entry.Payment}\t{entry.Billed:MMM dd, yyyy}");
+			}
+			else if(args[0] == "customers")
+			{
+				var customers = shop.GetCustomers();
+				var prm = Expression.Parameter(typeof(Contact));
+				var eql = Expression.Equal
+				(
+					Expression.Property(prm, args[1]),
+					Expression.Constant(args[2])
+				);
+				var filter = Expression.Lambda<Func<Contact, bool>>(eql, prm);
+				var selection = customers.Where(filter);
+				foreach(var entry in selection)
+					Console.WriteLine(entry);
+			}
 		}
 	}
 }

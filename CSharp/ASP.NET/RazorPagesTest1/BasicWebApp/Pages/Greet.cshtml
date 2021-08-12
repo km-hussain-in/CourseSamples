@@ -1,13 +1,7 @@
 @page "{person=Visitor}"
-@inject Dictionary<string, int> counters
+@inject BasicWebApp.ICounterService counter
 @{
-	var visitor = ViewContext.RouteData.Values["person"].ToString();
-	int count;
-	lock(counters)
-	{
-		counters.TryGetValue(visitor, out count);
-		counters[visitor] = ++count;
-	}	
+	var id = ViewContext.RouteData.Values["person"].ToString();
 }
 @addTagHelper *, BasicWebApp
 <!DOCTYPE html>
@@ -16,9 +10,11 @@
 		<title>BasicWebApp</title>
 	</head>
 	<body>
-		<h1>Welcome @visitor</h1>
-		<b>Current Time: </b><span time-display-format="HH:mm:ss"></span>
-		<p><b>Number of Greetings: </b>@count</p>
+		<h1>Welcome @id</h1>
+		<b>Number of Greetings: </b>@counter.CountNext(id)
+		<p>
+			<b>Current Time: </b><span time-display-format="HH:mm:ss"></span>
+		</p>
 	</body>
 </html>
 
