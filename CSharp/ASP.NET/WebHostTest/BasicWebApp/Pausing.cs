@@ -14,7 +14,7 @@ namespace BasicWebApp
 		public Pausing(RequestDelegate next, IConfiguration config)
 		{
 			_next = next;
-			pause = config.GetValue<int?>("Pausing:Interval") ?? 10;
+			pause = config.GetValue<int?>("Pausing:Interval") ?? 10; //see appsettings.json
 		}
 
 		public async Task Invoke(HttpContext context)
