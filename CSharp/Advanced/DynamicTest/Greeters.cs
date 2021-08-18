@@ -1,43 +1,41 @@
+using System;
+
 namespace Greeting
 {
-	using System;
-	using System.Dynamic;
 
 	class FormalGreeter
 	{
-		public string Title { get; set; } = "Mx";
+		public string Title { get; set; } = "Mr";
 
-		public DateTime Time => DateTime.Now;
-
-		public string Meet(string visitor) => $"Hello {Title} {visitor}";	
+		public string Greet(string visitor) => $"Hello {Title} {visitor}";	
 	}
 
-	class CasualGreeter : DynamicObject
+	class CasualGreeter
 	{
-		public int Code => Environment.TickCount; 
 
 		public String Greeted { get; set; } = "Nobody";
 
 		public int Count { get; set; } = 0;
 
-		public string Meet(string visitor)
+		public string Greet(string visitor)
 		{
 			Greeted = visitor;
 			Count += 1;
 			return $"Hi {visitor}";
 		}
+	}
 
-		public override bool TryInvokeMember(InvokeMemberBinder method, object[] arguments, out object result)
+	static class DynamicGreeter
+	{
+		public static dynamic Build(string salute)
 		{
-			if(method.Name == "Leave" && arguments.Length == 1 && Equals(arguments[0], Greeted))
-			{
-				result = $"Bye {Greeted}";
-				return true;
-			}
-			result = null;
-			return false;
+			dynamic greeter = new System.Dynamic.ExpandoObject();
+			greeter.Time = DateTime.Now;
+			greeter.Meet = (Func<string, string>)(person => $"{salute} {person}");
+			if(salute == "Welcome")
+				greeter.Leave = (Func<string, string>)(person => $"Goodbye {person}");
+			return greeter;
 		}
-
 	}
 }
 
