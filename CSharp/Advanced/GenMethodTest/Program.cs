@@ -4,9 +4,9 @@ namespace GenMethodTest
 {
 	partial class Interval : IComparable<Interval>
 	{
-		public int CompareTo(Interval that)
+		public int CompareTo(Interval? that)
 		{
-			return this.GetTime() - that.GetTime();
+			return this.GetTime() - that!.GetTime();
 		}
 	}
 

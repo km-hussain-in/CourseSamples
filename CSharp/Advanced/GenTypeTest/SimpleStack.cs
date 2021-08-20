@@ -1,3 +1,5 @@
+#nullable disable
+
 namespace GenTypeTest
 {
 	partial class SimpleStack<V>

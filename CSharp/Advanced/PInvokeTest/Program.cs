@@ -7,6 +7,15 @@ namespace PInvokeTest
 {
 	class Program
 	{
+		private unsafe static void SquareAll(double[] values)
+		{
+			fixed(double* buf = &values[0])
+			{
+				for(int i = 0; i < values.Length; ++i)
+					buf[i] *= buf[i];
+			}
+		}
+
 		[DllImport("natsup", EntryPoint="GCD")]
 		extern static long GreatestDivisor(long first, long second);
 
@@ -23,19 +32,16 @@ namespace PInvokeTest
 		[DllImport("natsup")]
 		extern static double SequenceSum(Sequence seq, in Range lim);
 	
-		private unsafe static void SquareAll(double[] values)
-		{
-			fixed(double* buf = &values[0])
-			{
-				for(int i = 0; i < values.Length; ++i)
-					buf[i] *= buf[i];
-			}
-		}
-
 		static void Main(string[] args)
 		{
 			switch(args[0])
 			{
+				case "square":
+					double[] list = args.Skip(1).Select(double.Parse).ToArray();
+					SquareAll(list);
+					foreach(double i in list)
+						Console.WriteLine(i);
+					break;
 				case "gcd":
 					long m = long.Parse(args[1]);
 					long n = long.Parse(args[2]);
@@ -54,12 +60,6 @@ namespace PInvokeTest
 					};
 					double sum = SequenceSum(t => 2 * t - 1, bounds);
 					Console.WriteLine(sum);
-					break;
-				case "square":
-					double[] list = args.Skip(1).Select(double.Parse).ToArray();
-					SquareAll(list);
-					foreach(double i in list)
-						Console.WriteLine(i);
 					break;
 			}
 		}

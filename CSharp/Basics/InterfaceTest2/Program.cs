@@ -30,7 +30,7 @@ namespace InterfaceTest2
 
 	class ResourceConsumer : IConsumer
 	{
-		private string id;
+		private string? id;
 
 		public ResourceConsumer(string name)
 		{
