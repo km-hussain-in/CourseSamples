@@ -36,3 +36,5 @@ namespace DemoApp
     }
 }
 
+//dotnet add package Banking -s ../Banking/bin/Debug/
+
