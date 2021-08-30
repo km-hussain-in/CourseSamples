@@ -1,4 +1,5 @@
 <!DOCTYYPE html>
+@using BasicWebApp
 @{
 	var visitor = ViewContext.RouteData.Values["id"] ?? "Visitor";
 }
@@ -8,7 +9,7 @@
 	</head>	
 	<body style="color:white;background-color:black">
 		<h1>Hello @visitor</h1>
-		<b>Current Time: </b>@DateTime.Now
+		<b>Current Time: </b>@Html.CurrentTimeAs("yyyy-MM-dd HH:mm:ss")
 	</body>
 </html>
 

@@ -13,7 +13,7 @@ namespace BasicWebApp.Controllers
 		{
 			if(id != null && (_counter.CountNext(id) % 2) == 0)
 				return View("~/Views/Hello.cshtml");
-			return View();
+			return View("~/Views/Welcome.cshtml");
 		}
 	}
 }
