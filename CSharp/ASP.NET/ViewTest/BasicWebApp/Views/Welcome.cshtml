@@ -1,0 +1,15 @@
+<!DOCTYYPE html>
+@using BasicWebApp;
+@{
+	var visitor = ViewContext.RouteData.Values["id"] ?? "Visitor";
+}
+<html>
+	<head>
+		<title>BasicWebApp</title>
+	</head>	
+	<body>
+		<h1>Welcome @visitor</h1>
+		<b>Current Time: </b>@Html.CurrentTimeAs("yyyy-MM-dd HH:mm:ss")
+	</body>
+</html>
+
