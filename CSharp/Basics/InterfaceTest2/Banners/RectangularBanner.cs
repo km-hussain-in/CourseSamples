@@ -8,14 +8,14 @@ namespace InterfaceTest2.Banners
 
 		public string Text { get; set; }
 
-		public string Style()
-		{
-			return "[{0}]";
-		}
-
 		public double Area()
 		{
 			return Length * Breadth;
+		}
+
+		public string Style()
+		{
+			return "[{0}]";
 		}
 	}
 }
