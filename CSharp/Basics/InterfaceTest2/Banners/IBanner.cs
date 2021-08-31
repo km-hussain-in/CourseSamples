@@ -14,7 +14,7 @@ namespace InterfaceTest2.Banners
 		
 		string Style()
 		{
-			return "{0})";
+			return "({0})";
 		}
 
 	}
