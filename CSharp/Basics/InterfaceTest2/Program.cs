@@ -20,8 +20,10 @@ namespace InterfaceTest2
 				throw new ArgumentException("copies");
 			for(int i = 1; i <= copies; ++i)
 			{
-				Console.WriteLine($"Printer {id} - page {i}");
+				Console.WriteLine($"Printing {id} page {i}");
+				Console.WriteLine("--------------------------------");
 				Console.WriteLine(banner.Style(), banner.Text);
+				Console.WriteLine("--------------------------------");
 			}
 			return banner.Price(copies);
 		}
@@ -38,33 +40,45 @@ namespace InterfaceTest2
 
     class Program
     {
+		static void Run(float w)
+		{
+			var b = new CircularBanner
+			{
+				Diameter = w,
+				Text = "Smooth all around"
+			}; 
+			var p = new BannerPrinter("shared");
+			Console.WriteLine("Payment: {0:0.00}", p.Print(b));
+			p.Dispose();
+		}
+
+		static void Run(float w, float h, int n)
+		{
+			var b = new RectangularBanner()
+			{
+				Length = w,
+				Breadth = h,
+				Text = "Sharp at corners"
+			};
+			using(var p = new BannerPrinter("shared"))
+			{
+				Console.WriteLine("Payment: {0:0.00}", p.Print(b, n));
+			}
+
+		}
+
         static void Main(string[] args)
         {
 			try
 			{
-				float w = float.Parse(args[0]);
-				var b1 = new CircularBanner
-				{
-					Diameter = w,
-					Text = "Smooth all around"
-				}; 
-				var p1 = new BannerPrinter("first");
-				Console.WriteLine("Payment: {0:0.00}", p1.Print(b1));
-				p1.Dispose();
-				float h = float.Parse(args[1]);
-				int n = int.Parse(args[2]);
-				var b2 = new RectangularBanner()
-				{
-					Length = w,
-					Breadth = h,
-					Text = "Sharp at corners"
-				};
-				using(var p2 = new BannerPrinter("second"))
-				{
-					Console.WriteLine("Payment: {0:0.00}", p2.Print(b2, n));
-				}
+				if(args.Length < 3)
+					Run(float.Parse(args[0]));
+				else
+					Run(float.Parse(args[0]), float.Parse(args[1]), int.Parse(args[2]));
 			}
-			catch {}
+			catch{}
+			Console.WriteLine("Press any key to exit...");
+			Console.ReadKey(false);
         }
     }
 }
