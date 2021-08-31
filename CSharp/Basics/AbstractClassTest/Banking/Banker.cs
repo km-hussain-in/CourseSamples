@@ -24,6 +24,16 @@ namespace Banking
 				Id = 200000000L + nid++
 			};
 		}
+
+		public static bool Transfer(this Account sender, decimal funds, Account receiver)
+		{
+			if(ReferenceEquals(sender, receiver))
+				return false;
+			sender.Withdraw(funds);
+			receiver.Deposit(funds);
+			return true;
+		}
 	}
 }
+
 

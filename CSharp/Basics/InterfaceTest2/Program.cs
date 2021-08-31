@@ -2,55 +2,35 @@
 
 namespace InterfaceTest2
 {
-	interface IConsumer : IDisposable
-	{
-		void Apply(int option);
+	using Banners;
 
-		void ApplyAll(int count)
-		{
-			for(int opt = 1; opt <= count; ++opt)
-				Apply(opt);
-		}
-	}
-
-	static class Consumer
-	{
-		public static void Consume(this IConsumer that, int option)
-		{
-			try
-			{
-				that.Apply(option);
-			}
-			finally
-			{
-				that.Dispose();
-			}
-		}
-	}
-
-	class ResourceConsumer : IConsumer
+	class BannerPrinter : IDisposable
 	{
 		private string? id;
 
-		public ResourceConsumer(string name)
+		public BannerPrinter(string name)
 		{
 			id = name;
-			Console.WriteLine($"{id} resource acquired.");
+			Console.WriteLine($"Acquiring {id} printer resource");
 		}
 
-		public void Apply(int option)
+		public double Print(IBanner banner, int copies=1)
 		{
-			if(option <= 0)
-				throw new ArgumentException("option");
-			if(id != null)
-				Console.WriteLine($"{id} resource consumed with action<{option}>.");
+			if(copies < 1 || copies > 10)
+				throw new ArgumentException("copies");
+			for(int i = 1; i <= copies; ++i)
+			{
+				Console.WriteLine($"Printer {id} - page {i}");
+				Console.WriteLine(banner.Style(), banner.Text);
+			}
+			return banner.Price(copies);
 		}
 
 		public void Dispose()
 		{
 			if(id != null)
 			{
-				Console.WriteLine($"{id} resource released.");
+				Console.WriteLine($"Releasing {id} printer resource");
 				id = null;
 			}
 		}
@@ -62,15 +42,26 @@ namespace InterfaceTest2
         {
 			try
 			{
-            	var a = new ResourceConsumer("First");
-				a.Apply(1);
-				a.Dispose();
-				int m = int.Parse(args[0]);
-            	var b = new ResourceConsumer("Second");
-				b.Consume(m);
-				int n = int.Parse(args[1]);
-				using(IConsumer c = new ResourceConsumer("Third")){
-					c.ApplyAll(n);
+				float w = float.Parse(args[0]);
+				var b1 = new CircularBanner
+				{
+					Diameter = w,
+					Text = "Smooth all around"
+				}; 
+				var p1 = new BannerPrinter("first");
+				Console.WriteLine("Payment: {0:0.00}", p1.Print(b1));
+				p1.Dispose();
+				float h = float.Parse(args[1]);
+				int n = int.Parse(args[2]);
+				var b2 = new RectangularBanner()
+				{
+					Length = w,
+					Breadth = h,
+					Text = "Sharp at corners"
+				};
+				using(var p2 = new BannerPrinter("second"))
+				{
+					Console.WriteLine("Payment: {0:0.00}", p2.Print(b2, n));
 				}
 			}
 			catch {}
