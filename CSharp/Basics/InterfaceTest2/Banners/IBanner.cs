@@ -6,10 +6,9 @@ namespace InterfaceTest2.Banners
 
 		double Area();
 
-		double Price(int count)
+		double Price()
 		{
-			float rate = count < 3 ? 0.5f : 0.4f;
-			return count * rate * Area() + 0.05 * Text.Length;
+			return 0.75 * Area() + 0.05 * Text.Length;
 		}
 		
 		string Style()
