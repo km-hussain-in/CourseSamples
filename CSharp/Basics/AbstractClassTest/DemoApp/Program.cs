@@ -20,6 +20,7 @@ namespace DemoApp
 			catch(InsufficientFundsException)
 			{
 				Console.WriteLine("Payment failed due to lack of funds!");
+				jill.CloseAccount();
 			}
 			catch(Exception ex)
 			{

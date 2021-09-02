@@ -23,15 +23,12 @@ namespace Banking
 			{
 				Id = 200000000L + nid++
 			};
+	
 		}
 
-		public static bool Transfer(this Account sender, decimal funds, Account receiver)
+		public static void CloseAccount(this Account target)
 		{
-			if(ReferenceEquals(sender, receiver))
-				return false;
-			sender.Withdraw(funds);
-			receiver.Deposit(funds);
-			return true;
+			target.Id = 0;
 		}
 	}
 }

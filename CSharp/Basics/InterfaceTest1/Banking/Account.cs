@@ -9,6 +9,15 @@ namespace Banking
 		public abstract void Deposit(decimal amount);
 	
 		public abstract void Withdraw(decimal amount);
+
+		public bool Transfer(decimal funds, Account that)
+		{
+			if(ReferenceEquals(this, that))
+				return false;
+			this.Withdraw(funds);
+			that.Deposit(funds);
+			return true;
+		}
 	}
 }
 

@@ -4,11 +4,11 @@ namespace InterfaceTest2
 {
 	using Banners;
 
-	class LinePrinter : IBannerPrinter, IDisposable
+	class BannerPrinter : IDisposable
 	{
 		private string? id;
 
-		public LinePrinter(string name)
+		public BannerPrinter(string name)
 		{
 			id = name;
 			Console.WriteLine($"Acquiring {id} printer resource");
@@ -47,7 +47,7 @@ namespace InterfaceTest2
 				Diameter = w,
 				Text = "Smooth all around"
 			}; 
-			var p = new LinePrinter("shared");
+			var p = new BannerPrinter("shared");
 			Console.WriteLine("Payment: {0:0.00}", p.Print(b));
 			p.Dispose();
 		}
@@ -60,7 +60,7 @@ namespace InterfaceTest2
 				Breadth = h,
 				Text = "Sharp at corners"
 			};
-			using(var p = new LinePrinter("shared"))
+			using(var p = new BannerPrinter("shared"))
 			{
 				Console.WriteLine("Payment: {0:0.00}", p.Print(b, n));
 			}
