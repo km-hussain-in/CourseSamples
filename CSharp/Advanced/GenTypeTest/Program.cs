@@ -3,16 +3,6 @@
 namespace GenTypeTest
 {
 
-	interface IStackReader<out V>
-	{
-		V Pop();
-		bool Empty();
-	}
-
-	partial class SimpleStack<V> : IStackReader<V>
-	{
-	}
-
     class Program
     {
 		static void PopPrint(IStackReader<object> store)
@@ -35,12 +25,20 @@ namespace GenTypeTest
 			a.Push("Thursday");
 			a.Push("Friday");
 			PopPrint(a);
-			var b = new SimpleStack<Interval>();
+			SimpleStack<Interval> b = new();
 			b.Push(new Interval(3, 41));
 			b.Push(new Interval(5, 32));
 			b.Push(new Interval(8, 23));
 			b.Push(new Interval(6, 14));
 			PopPrint(b);
+			var c = new SimpleStack<double?>();
+			c.Push(5.13);
+			c.Push(7.24);
+			c.Push(null);
+			c.Push(4.37);
+			c.Push(6.45);
+			foreach(var d in c)
+				Console.WriteLine(d ?? 0.01);
         }
     }
 }

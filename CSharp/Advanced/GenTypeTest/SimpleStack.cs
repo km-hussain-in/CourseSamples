@@ -2,7 +2,13 @@
 
 namespace GenTypeTest
 {
-	partial class SimpleStack<V>
+	interface IStackReader<out V>
+	{
+		bool Empty();
+		V Pop();
+	}
+
+	class SimpleStack<V> : IStackReader<V>
 	{
 		class Node
 		{
@@ -27,6 +33,12 @@ namespace GenTypeTest
 		public bool Empty()
 		{
 			return top == null;
+		}
+
+		public System.Collections.Generic.IEnumerator<V> GetEnumerator()
+		{
+			for(Node n = top; n != null; n = n.Below)
+				yield return n.Value;
 		}
 	}
 }

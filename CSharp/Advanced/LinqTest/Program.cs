@@ -5,30 +5,34 @@ using System.Linq.Expressions;
 
 namespace LinqTest
 {
-	class Program
+	static class Program
 	{
+		static void Print(this IEnumerable<object> source)
+		{
+			foreach(var entry in source)
+				Console.WriteLine(entry);
+		}
+
 		static void Main(string[] args)
 		{
 			var shop = new Shop();
-			if(args[0] == "outlets")
+			if(args[0] == "items")
 			{
-				var outlets = shop.GetOutlets()
-								.Where(e => e.Item1 == args[1])
-								.Select(e => e.Item2);
-				foreach(string city in outlets)
-					Console.WriteLine(city);
+				shop.GetItems()
+					.Where(i => i.EndsWith(args[1]))
+					.Select(i => i.Split('-')[0])
+					.Print();
 			}
 			else if(args[0] == "orders")
 			{
-				var orders = shop.GetOrders();
-				var selection = from e in orders
+				var selection = from e in shop.GetOrders("cpu")
 								where e.Quantity >= int.Parse(args[1])
 								orderby e.Date
 								select new 
 								{
 									Person = e.Customer.ToUpper(),
 									Billed = DateTime.Parse(e.Date),
-									Payment = 1000 * e.Quantity
+									Payment = 10000 * e.Quantity
 								};
 				foreach(var entry in selection)
 					Console.WriteLine($"{entry.Person}\t{entry.Payment}\t{entry.Billed:MMM dd, yyyy}");
@@ -43,9 +47,7 @@ namespace LinqTest
 					Expression.Constant(args[2])
 				);
 				var filter = Expression.Lambda<Func<Contact, bool>>(eql, prm);
-				var selection = customers.Where(filter);
-				foreach(var entry in selection)
-					Console.WriteLine(entry);
+				customers.Where(filter).Print();
 			}
 		}
 	}
