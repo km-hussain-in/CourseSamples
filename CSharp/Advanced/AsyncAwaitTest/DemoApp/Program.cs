@@ -31,7 +31,7 @@ namespace DemoApp
 	{
 		static async Task DoComputation(int count)
 		{
-			Console.Write("Computing");
+			Console.Write("Computing...");
 			var c = new Computation();
 			int t1 = Environment.TickCount;
 			var r = await c.ComputeAsync(1, count);
