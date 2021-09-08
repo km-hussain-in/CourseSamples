@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace LinqTest
+namespace DemoApp
 {
 	record Order(string Customer, string Date, int Quantity);
 

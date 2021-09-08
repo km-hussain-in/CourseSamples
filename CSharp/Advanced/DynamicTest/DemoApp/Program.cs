@@ -1,6 +1,6 @@
 using System;
 
-namespace DynamicTest
+namespace DemoApp
 {
 	
 	class Program

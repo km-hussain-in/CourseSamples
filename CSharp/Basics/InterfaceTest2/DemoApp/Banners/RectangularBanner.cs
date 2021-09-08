@@ -1,4 +1,4 @@
-namespace InterfaceTest2.Banners
+namespace DemoApp.Banners
 {
 	public struct RectangularBanner : IBanner
 	{

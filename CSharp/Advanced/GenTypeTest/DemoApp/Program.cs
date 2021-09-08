@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenTypeTest
+namespace DemoApp
 {
 
     class Program

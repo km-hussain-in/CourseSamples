@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenMethodTest
+namespace DemoApp
 {
 	partial class Interval : IComparable<Interval>
 	{

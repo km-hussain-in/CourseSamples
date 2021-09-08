@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InterfaceTest2
+namespace DemoApp
 {
 	using Banners;
 

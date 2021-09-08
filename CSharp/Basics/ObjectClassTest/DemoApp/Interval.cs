@@ -1,4 +1,4 @@
-namespace GenTypeTest
+namespace DemoApp
 {
 	partial class Interval
 	{
@@ -27,7 +27,7 @@ namespace GenTypeTest
 			return Minutes + Seconds;
 		}
 
-		public override bool Equals(object? other)
+		public override bool Equals(object other)
 		{
 			if(other is Interval that)
 			{

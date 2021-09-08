@@ -3,7 +3,7 @@ using System.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace PInvokeTest
+namespace DemoApp
 {
 	class Program
 	{

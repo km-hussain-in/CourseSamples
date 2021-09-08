@@ -1,4 +1,4 @@
-namespace ObjectClassTest
+namespace DemoApo
 {
 	partial class Interval
 	{
@@ -27,7 +27,7 @@ namespace ObjectClassTest
 			return Minutes + Seconds;
 		}
 
-		public override bool Equals(object other)
+		public override bool Equals(object? other)
 		{
 			if(other is Interval that)
 			{

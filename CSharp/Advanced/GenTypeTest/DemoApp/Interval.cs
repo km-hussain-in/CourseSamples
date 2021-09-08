@@ -1,4 +1,4 @@
-namespace GenMethodTest
+namespace DemoApp
 {
 	partial class Interval
 	{

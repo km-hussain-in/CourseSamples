@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectClassTest
+namespace DemoApp
 {
 	partial class Interval
 	{

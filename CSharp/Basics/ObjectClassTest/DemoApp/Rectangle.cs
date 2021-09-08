@@ -1,4 +1,4 @@
-namespace ObjectClassTest
+namespace DemoApp
 {
 	struct Rectangle
 	{

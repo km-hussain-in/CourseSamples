@@ -1,6 +1,6 @@
 #nullable disable
 
-namespace GenTypeTest
+namespace DemoApp
 {
 	interface IStackReader<out V>
 	{
