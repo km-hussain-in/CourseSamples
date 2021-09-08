@@ -32,12 +32,13 @@ namespace DemoApp
 		static async Task DoComputation(int count)
 		{
 			Console.Write("Computing...");
+			var w = new System.Diagnostics.Stopwatch();
 			var c = new Computation();
-			int t1 = Environment.TickCount;
+			w.Start();
 			var r = await c.ComputeAsync(1, count);
-			int t2 = Environment.TickCount;
+			w.Stop();
 			Console.WriteLine("Done!");
-			Console.WriteLine("Result = {0}, computed in {1:0.000} seconds.", r, 0.001 * (t2 - t1));
+			Console.WriteLine("Result = {0}, computed in {1:0.000} seconds.", r, w.Elapsed.TotalSeconds);
 		}
 
 		static void Main(string[] args)
