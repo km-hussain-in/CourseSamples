@@ -37,17 +37,18 @@ namespace LinqTest
 				foreach(var entry in selection)
 					Console.WriteLine($"{entry.Person}\t{entry.Payment}\t{entry.Billed:MMM dd, yyyy}");
 			}
-			else if(args[0] == "customers")
+			else if(args[0] == "suppliers")
 			{
-				var customers = shop.GetCustomers();
-				var prm = Expression.Parameter(typeof(Contact));
+				var prm = Expression.Parameter(typeof(Dealer));
 				var eql = Expression.Equal
 				(
 					Expression.Property(prm, args[1]),
 					Expression.Constant(args[2])
 				);
-				var filter = Expression.Lambda<Func<Contact, bool>>(eql, prm);
-				customers.Where(filter).Print();
+				var filter = Expression.Lambda<Func<Dealer, bool>>(eql, prm);
+				shop.GetSuppliers()
+					.Where(filter)
+					.Print();
 			}
 		}
 	}

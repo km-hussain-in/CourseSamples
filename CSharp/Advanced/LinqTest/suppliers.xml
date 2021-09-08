@@ -1,0 +1,27 @@
+<suppliers>
+	<dealer item="cpu">
+		<city>Mumbai</city>
+		<name>Alex</name>
+	</dealer>
+	<dealer item="mouse">
+		<city>Chennai</city>
+		<name>Beth</name>
+	</dealer>
+	<dealer item="hdd">
+		<city>Mumbai</city>
+		<name>Clark</name>
+	</dealer>
+	<dealer item="cpu">
+		<city>Delhi</city>
+		<name>David</name>
+	</dealer>
+	<dealer item="monitor">
+		<city>Mumbai</city>
+		<name>Eric</name>
+	</dealer>
+	<dealer item="ddr">
+		<city>Kolkata</city>
+		<name>Alex</name>
+	</dealer>
+</suppliers>
+

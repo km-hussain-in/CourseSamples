@@ -5,9 +5,9 @@ using System.Xml.Linq;
 
 namespace LinqTest
 {
-	record Order(string Customer, string Date, string item, int Quantity);
+	record Order(string Customer, string Date, int Quantity);
 
-	record Contact(string Name, string City, string Zip);
+	record Dealer(string Name, string City, string Item);
 
 	class Shop
 	{
@@ -20,25 +20,25 @@ namespace LinqTest
 		{
 			return new List<Order>
 			{
-				new ("jack", "2020-06-19", item, 3),
-				new ("jill", "2021-02-05", item, 8),
-				new ("john", "2020-11-09", item, 5),
-				new ("jeff", "2020-01-10", item, 2),
-				new ("jane", "2021-06-23", item, 6),
-				new ("jack", "2020-12-24", item, 10),
-				new ("john", "2020-08-09", item, 7)
+				new ("jack", "2020-06-19", 3),
+				new ("jill", "2021-02-05", 8),
+				new ("john", "2020-11-09", 5),
+				new ("jeff", "2020-01-10", 2),
+				new ("jane", "2021-06-23", 6),
+				new ("jack", "2020-12-24", 10),
+				new ("john", "2020-08-09", 7)
 			};
 		}	
 
-		public IQueryable<Contact> GetCustomers()	
+		public IQueryable<Dealer> GetSuppliers()	
 		{
-			return XElement.Load("customers.xml")
-					.Elements("contact")
-					.Select(e => new Contact
+			return XElement.Load("suppliers.xml")
+					.Elements("dealer")
+					.Select(e => new Dealer
 					(
-						Name: (string)e.Attribute("name"),
+						Name: (string)e.Element("name"),
 						City: (string)e.Element("city"),
-						Zip: (string)e.Element("zip")
+						Item: (string)e.Attribute("item")
 					))
 					.AsQueryable();
 		}
