@@ -47,7 +47,7 @@ namespace DemoApp
 			while(!job.IsCompleted)
 			{
 				Console.Write(".");
-				Task.Delay(500).Wait();
+				Task.Delay(200).Wait();
 			}
 		}
 	}
