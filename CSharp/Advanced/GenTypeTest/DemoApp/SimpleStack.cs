@@ -2,13 +2,13 @@
 
 namespace DemoApp
 {
-	interface IStackReader<out V>
+	interface IStack<out V>
 	{
 		bool Empty();
 		V Pop();
 	}
 
-	class SimpleStack<V> : IStackReader<V>
+	class SimpleStack<V> : IStack<V>
 	{
 		class Node
 		{
@@ -23,17 +23,17 @@ namespace DemoApp
 			top = new Node {Value=item, Below=top};
 		}
 
+		public bool Empty()
+		{
+			return top == null;
+		}
+
 		public V Pop()
 		{
 			V item = top.Value;
 			top = top.Below;
 			return item;
 		}	
-
-		public bool Empty()
-		{
-			return top == null;
-		}
 
 		public System.Collections.Generic.IEnumerator<V> GetEnumerator()
 		{

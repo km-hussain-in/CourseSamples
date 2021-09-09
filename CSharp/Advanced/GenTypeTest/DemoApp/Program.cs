@@ -5,7 +5,7 @@ namespace DemoApp
 
     class Program
     {
-		static void PopPrint(IStackReader<object> store)
+		static void PopPrint(IStack<object> store)
 		{
 			for(int n = 0; !store.Empty(); ++n)
 			{
