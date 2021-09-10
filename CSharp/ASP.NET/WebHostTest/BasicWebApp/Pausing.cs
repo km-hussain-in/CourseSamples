@@ -21,7 +21,7 @@ namespace BasicWebApp
 		{
 			var delta = lastTime + pause - DateTime.Now;
 			if(delta.Ticks > 0)
-				await context.Response.WriteAsync($"Busy, please try after {delta.Seconds} sec...");
+				await context.Response.WriteAsync($"Busy, please try after {delta.TotalSeconds} sec...");
 			else
 			{
 				lastTime = DateTime.Now;
