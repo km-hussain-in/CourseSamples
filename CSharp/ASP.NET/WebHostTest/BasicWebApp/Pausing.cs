@@ -20,8 +20,8 @@ namespace BasicWebApp
 		public async Task Invoke(HttpContext context)
 		{
 			var delta = lastTime + pause - DateTime.Now;
-			if(delta.Ticks > 0)
-				await context.Response.WriteAsync($"Busy, please try after {delta.TotalSeconds} sec...");
+			if(delta > TimeSpan.Zero)
+				await context.Response.WriteAsync($"Busy, please try after {delta.Seconds} sec...");
 			else
 			{
 				lastTime = DateTime.Now;
